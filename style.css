@@ -1,11 +1,12 @@
 :root {
-  --bg: #f5f9f6; /* Hellgrüner, sanfter Hintergrund */
+  --bg: #f5f9f6;
   --text: #111;
   --accent: #609f85;
   --green-dark: #2a5d3b;
   --gold: #d4af37;
   --gold-light: #a5c3a1;
 }
+
 [data-theme="dark"] {
   --bg: #121212;
   --text: #eee;
@@ -212,6 +213,7 @@ main {
   text-align: center;
   transition: box-shadow 0.3s ease;
   max-width: 280px;
+  cursor: default;
 }
 
 .produkt:hover {
@@ -264,9 +266,11 @@ main {
   user-select: none;
 }
 
-.cta-button:hover {
+.cta-button:hover,
+.cta-button:focus {
   background-color: var(--green-dark);
   color: var(--text);
+  outline: none;
 }
 
 .inspirationen {
