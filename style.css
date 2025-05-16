@@ -167,7 +167,7 @@ main {
   justify-content: center;
   max-width: 1100px;
   margin: auto;
-  align-items: stretch;
+  align-items: stretch; /* sorgt für gleiche Höhe */
 }
 
 .produkt-wrapper {
@@ -203,7 +203,7 @@ main {
 }
 
 .produkt {
-  min-height: 420px;
+  min-height: 430px; /* einheitliche Höhe für alle Produkte */
   background: var(--bg);
   border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.05);
@@ -215,6 +215,7 @@ main {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   cursor: default;
   justify-content: space-between;
+  height: 100%;
 }
 
 .produkt:hover,
@@ -279,6 +280,8 @@ main {
   outline: none;
 }
 
+/* Inspirationen */
+
 .inspirationen {
   display: flex;
   flex-wrap: wrap;
@@ -307,6 +310,7 @@ main {
   outline: none;
 }
 
+/* Footer */
 footer {
   margin-top: 3rem;
   text-align: center;
