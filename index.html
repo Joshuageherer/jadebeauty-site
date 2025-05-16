@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>JadeBeauty – Glow From Within</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Glow From Within mit Gua Sha, Selfcare & natürlichen Produkten von JadeBeauty." />
   <link rel="stylesheet" href="style.css" />
   <script src="darkmode.js" defer></script>
@@ -12,11 +12,14 @@
 <body>
   <header>
     <nav>
-      <a href="index.html">Start</a>
-      <a href="shop.html">Shop</a>
-      <a href="anleitung.html">Anleitung</a>
-      <a href="blog.html">Blog</a>
-      <a href="kontakt.html">Kontakt</a>
+      <button id="nav-toggle" aria-label="Navigation umschalten" aria-expanded="false" aria-controls="nav-menu">☰</button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="anleitung.html">Anleitung</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
     </nav>
     <button id="dark-toggle" class="toggle-btn" aria-label="Darkmode umschalten">🌙</button>
   </header>
@@ -24,91 +27,73 @@
   <main>
     <section class="warum-jadebeauty">
       <h1>Warum JadeBeauty?</h1>
-      <div class="vorteile-box">
-        <ul>
-          <li>✨ Handgefertigte Produkte aus natürlichem Jade – für deine Haut nur das Beste.</li>
-          <li>🌿 Fördert die natürliche Schönheit und sorgt für einen strahlenden Teint.</li>
-          <li>💆‍♀️ Entspannt Gesicht und Geist mit traditioneller Gua Sha Technik.</li>
-          <li>🌱 100% vegan, tierversuchsfrei und nachhaltig produziert.</li>
-          <li>💚 Perfekt für deine tägliche Selfcare-Routine, einfach anzuwenden und effektiv.</li>
-        </ul>
+      <div class="vorteile-box-container">
+        <div class="vorteile-box">
+          <span class="icon">✨</span>
+          <p>Handgefertigte Produkte aus natürlichem Jade – für deine Haut nur das Beste.</p>
+        </div>
+        <div class="vorteile-box">
+          <span class="icon">🌿</span>
+          <p>Fördert die natürliche Schönheit und sorgt für einen strahlenden Teint.</p>
+        </div>
+        <div class="vorteile-box">
+          <span class="icon">💆‍♀️</span>
+          <p>Entspannt Gesicht und Geist mit traditioneller Gua Sha Technik.</p>
+        </div>
+        <div class="vorteile-box">
+          <span class="icon">🌱</span>
+          <p>100 % vegan, tierversuchsfrei und nachhaltig produziert.</p>
+        </div>
+        <div class="vorteile-box full-width">
+          <span class="icon">💚</span>
+          <p>Perfekt für deine tägliche Selfcare-Routine, einfach anzuwenden und effektiv.</p>
+        </div>
       </div>
     </section>
 
-    <section>
+    <section class="highlights-section">
       <h2>Unsere Highlights</h2>
+      <div class="highlights-labels">
+        <span class="label thermo-label">Thermo-Funktion</span>
+        <span class="label vegan-label">🌿 100 % vegan</span>
+      </div>
       <div class="produkte">
-        <div class="produkt-wrapper">
-          <article class="produkt">
-            <img src="assets/img/kosmetiktasche.jpg" alt="Kosmetiktasche mit JadeBeauty Logo" />
-            <h3>Kosmetiktasche</h3>
-            <p>Für deine Selfcare-Routine.</p>
-            <p class="preis">€18,95</p>
-            <p class="bewertung">⭐ 4,8 (37 Bewertungen)</p>
-            <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
-          </article>
-        </div>
+        <article class="produkt">
+          <img src="assets/img/kosmetiktasche.jpg" alt="Kosmetiktasche mit JadeBeauty Logo" />
+          <h3>Kosmetiktasche</h3>
+          <p>Für deine Selfcare-Routine.</p>
+          <p class="preis">€18,95</p>
+          <p class="bewertung" aria-label="4.8 von 5 Sternen">
+            ⭐⭐⭐⭐☆ (37 Bewertungen)
+          </p>
+          <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
+        </article>
 
-        <div class="produkt-wrapper">
-          <span class="label-outer thermal-label">Thermo-Funktion</span>
-          <article class="produkt">
-            <img src="assets/img/color-change-mug-handle-right.jpg" alt="Color Changing Mug mit Henkel rechts" />
-            <h3>Farbwechsel Tasse</h3>
-            <p>Beginne deinen Tag mit Stil.</p>
-            <p class="preis">€16,95</p>
-            <p class="bewertung">⭐ 4,9 (58 Bewertungen)</p>
-            <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
-          </article>
-        </div>
+        <article class="produkt">
+          <img src="assets/img/color-change-mug-handle-right.jpg" alt="Farbwechsel-Tasse Glow From Within" />
+          <h3>Farbwechsel-Tasse</h3>
+          <p>Beginne deinen Tag mit Stil.</p>
+          <p class="preis">€16,95</p>
+          <p class="bewertung" aria-label="4.9 von 5 Sternen">
+            ⭐⭐⭐⭐⭐ (58 Bewertungen)
+          </p>
+          <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
+        </article>
 
-        <div class="produkt-wrapper">
-          <span class="label-outer vegan-label">🌿 100 % vegan</span>
-          <article class="produkt">
-            <img src="assets/img/white-sage-candle-closed.jpg" alt="Duftkerze White Sage" />
-            <h3>Duftkerze White Sage</h3>
-            <p>Entspannung pur.</p>
-            <p class="preis">€17,95</p>
-            <p class="bewertung">⭐ 5,0 (112 Bewertungen)</p>
-            <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
-          </article>
-        </div>
-
-        <div class="produkt-wrapper">
-          <article class="produkt">
-            <img src="assets/img/tasche.jpg" alt="JadeBeauty Tasche" />
-            <h3>JadeBeauty Tasche</h3>
-            <p>Praktisch und stylish.</p>
-            <p class="preis">€16,00</p>
-            <p class="bewertung">⭐ 4,7 (25 Bewertungen)</p>
-            <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
-          </article>
-        </div>
-
-        <div class="produkt-wrapper">
-          <article class="produkt">
-            <img src="assets/img/tasse.jpg" alt="JadeBeauty Tasse" />
-            <h3>JadeBeauty Tasse</h3>
-            <p>Perfekt für deinen Kaffee.</p>
-            <p class="preis">€16,00</p>
-            <p class="bewertung">⭐ 4,6 (18 Bewertungen)</p>
-            <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
-          </article>
-        </div>
-
-        <div class="produkt-wrapper">
-          <article class="produkt">
-            <img src="assets/img/selfcare-tasse.jpg" alt="Selfcare Tasse" />
-            <h3>Selfcare Tasse</h3>
-            <p>Genieße deine Auszeit.</p>
-            <p class="preis">€16,00</p>
-            <p class="bewertung">⭐ 4,8 (40 Bewertungen)</p>
-            <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
-          </article>
-        </div>
+        <article class="produkt">
+          <img src="assets/img/white-sage-candle-closed.jpg" alt="Duftkerze White Sage" />
+          <h3>Duftkerze White Sage</h3>
+          <p>Entspannung pur.</p>
+          <p class="preis">€17,95</p>
+          <p class="bewertung" aria-label="5 von 5 Sternen">
+            ⭐⭐⭐⭐⭐ (112 Bewertungen)
+          </p>
+          <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
+        </article>
       </div>
     </section>
 
-    <section>
+    <section class="inspiration-section">
       <h2>Inspiration</h2>
       <div class="inspirationen">
         <img src="assets/img/inspiration1.png" alt="Inspiration 1" class="lightbox" tabindex="0" />
@@ -121,5 +106,16 @@
   <footer>
     <p>&copy; 2025 JadeBeauty | <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
+
+  <script>
+    // Mobile Navigation Toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+      navToggle.setAttribute('aria-expanded', !expanded);
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
