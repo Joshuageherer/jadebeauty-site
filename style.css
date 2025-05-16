@@ -19,14 +19,13 @@ body {
   font-family: sans-serif;
 }
 
-/* HEADER */
 header {
   position: sticky;
   top: 0;
   background: var(--bg);
   padding: 1rem 2rem;
   display: flex;
-  justify-content: center; /* Navi mittig */
+  justify-content: center;
   align-items: center;
   border-bottom: 1px solid #ccc;
   z-index: 1000;
@@ -68,71 +67,44 @@ nav a:hover {
   color: var(--text);
 }
 
-/* MAIN */
 main {
   max-width: 1000px;
   margin: auto;
   padding: 2rem;
 }
 
-/* Warum JadeBeauty */
-.section-title {
+h1, h2 {
   text-align: center;
-  color: var(--text);
   font-weight: 700;
   margin-bottom: 1.5rem;
-  font-size: 1.8rem;
+  color: var(--text);
 }
 
-.warum-jadebeauty {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.warum-box {
-  background-color: #9ec3a0;
-  border-radius: 12px;
-  padding: 1rem 1.5rem;
-  flex: 1 1 280px;
-  max-width: 280px;
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
   color: var(--text);
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  cursor: pointer;
-  user-select: none;
+  font-size: 1.1rem;
 }
 
-/* Warum JadeBeauty Icons */
-.warum-icon {
-  font-size: 1.8rem;
-  flex-shrink: 0;
+ul li {
+  margin: 0.75rem 0;
 }
 
-/* Unsere Highlights */
-.label-ueber {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  background-color: #cce5d9;
-  border-radius: 8px;
-  padding: 0.3rem 1rem;
-  color: var(--text);
-  max-width: 280px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 0.9rem;
+.label {
+  color: var(--gold);
+  font-weight: bold;
+  margin-top: 0.5rem;
 }
 
-.label-vegan {
-  max-width: 150px;
+.label.vegan {
+  display: inline-block;
+  margin-top: 0.5rem;
 }
 
-/* Produkte Grid */
 .produkte {
   display: flex;
   flex-wrap: wrap;
@@ -146,12 +118,8 @@ main {
   border-radius: 12px;
   padding: 1rem;
   background: var(--bg);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   text-align: center;
-  min-height: 420px; /* Einheitliche Höhe */
+  min-height: 420px;
   box-shadow: 0 0 6px rgb(0 0 0 / 0.1);
   transition: box-shadow 0.3s ease;
 }
@@ -172,7 +140,6 @@ main {
   font-size: 1.1rem;
   font-weight: bold;
   margin-top: 0.5rem;
-  color: var(--text);
 }
 
 .bewertung {
@@ -197,18 +164,15 @@ main {
   color: var(--text);
 }
 
-/* Inspiration */
 .inspirationen {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
-  justify-content: center;
-  overflow-x: auto;
 }
 
 .inspirationen img {
-  flex: 0 0 auto;
   width: 300px;
   border-radius: 12px;
   cursor: pointer;
@@ -220,7 +184,6 @@ main {
   transform: scale(1.05);
 }
 
-/* Footer */
 footer {
   margin-top: 3rem;
   text-align: center;
