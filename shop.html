@@ -1,78 +1,62 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop – JadeBeauty</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;}
-    .card {border-radius: 16px; box-shadow: 0 0 10px #ccc; padding: 1rem; background: white; text-align: center;}
-    .card img {width: 100%; border-radius: 12px; cursor: pointer;}
-    .thumbs {display: flex; gap: 0.5rem; margin-top: 0.5rem; justify-content: center;}
-    .thumbs img {width: 60px; height: 60px; object-fit: cover; border-radius: 8px; border: 2px solid #ccc;}
-    .price {font-weight: bold; color: #5a7d66;}
-  </style>
-  <script>
-    function showImage(img, containerId) {
-      document.getElementById(containerId).src = img;
-    }
-  </script>
+  <meta charset="UTF-8" />
+  <title>JadeBeauty – Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Shop für natürliche Jade Beautyprodukte von JadeBeauty." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="darkmode.js" defer></script>
+  <script src="lightbox.js" defer></script>
 </head>
 <body>
-  <h1 style="text-align:center;">JadeBeauty Shop</h1>
-  <div class="grid">
-<div class="card">
-  <h3>Color Morphing Mug</h3>
-  <img id="main0" src="f0d5aa15-daa8-4467-9456-b66a869c6962.png" alt="Color Morphing Mug">
-  <div class="thumbs">
-    <img src="f0d5aa15-daa8-4467-9456-b66a869c6962.png" onclick="showImage('f0d5aa15-daa8-4467-9456-b66a869c6962.png', 'main0')">
-    <img src="24f59da4-6f7f-4a14-8493-518523ed68eb.png" onclick="showImage('24f59da4-6f7f-4a14-8493-518523ed68eb.png', 'main0')">
-    <img src="2be77e9a-4b9b-4dca-9ab0-6bf43f1b1b7f.png" onclick="showImage('2be77e9a-4b9b-4dca-9ab0-6bf43f1b1b7f.png', 'main0')">
-    <img src="add81c91-7fad-4425-abc7-997948a43d76.png" onclick="showImage('add81c91-7fad-4425-abc7-997948a43d76.png', 'main0')">
-  </div>
-  <p class="price">17,95 €</p>
-</div>
-<div class="card">
-  <h3>Personalized Glow from Within Coffee Mug</h3>
-  <img id="main1" src="955a1583-010d-4b04-8dfc-b1ea0740d525.png" alt="Personalized Glow from Within Coffee Mug">
-  <div class="thumbs">
-    <img src="955a1583-010d-4b04-8dfc-b1ea0740d525.png" onclick="showImage('955a1583-010d-4b04-8dfc-b1ea0740d525.png', 'main1')">
-    <img src="25495fa5-6a6e-4b35-a8af-d3163dc6d1ba.png" onclick="showImage('25495fa5-6a6e-4b35-a8af-d3163dc6d1ba.png', 'main1')">
-    <img src="b78d25de-7ef7-4b21-b272-f124def85bd8.png" onclick="showImage('b78d25de-7ef7-4b21-b272-f124def85bd8.png', 'main1')">
-    <img src="149ab89d-1b17-499a-bd85-d4ade5aa69a1.png" onclick="showImage('149ab89d-1b17-499a-bd85-d4ade5aa69a1.png', 'main1')">
-  </div>
-  <p class="price">14,95 €</p>
-</div>
-<div class="card">
-  <h3>Duftkerze</h3>
-  <img id="main2" src="9c7c03d0-938c-4e4d-83be-848a78da5868.png" alt="Duftkerze">
-  <div class="thumbs">
-    <img src="9c7c03d0-938c-4e4d-83be-848a78da5868.png" onclick="showImage('9c7c03d0-938c-4e4d-83be-848a78da5868.png', 'main2')">
-    <img src="a8038245-452c-4db4-88ac-850f8967e38b.png" onclick="showImage('a8038245-452c-4db4-88ac-850f8967e38b.png', 'main2')">
-  </div>
-  <p class="price">16,95 €</p>
-</div>
-<div class="card">
-  <h3>Kosmetiktasche</h3>
-  <img id="main3" src="0353d9d4-98d1-47a7-a145-f01db13ae955.png" alt="Kosmetiktasche">
-  <div class="thumbs">
-    <img src="0353d9d4-98d1-47a7-a145-f01db13ae955.png" onclick="showImage('0353d9d4-98d1-47a7-a145-f01db13ae955.png', 'main3')">
-    <img src="5c5bbb75-d196-41fe-9c5a-a0b4f0a110e5.png" onclick="showImage('5c5bbb75-d196-41fe-9c5a-a0b4f0a110e5.png', 'main3')">
-  </div>
-  <p class="price">18,95 €</p>
-</div>
-<div class="card">
-  <h3>JadeBeauty Logo-Tasse</h3>
-  <img id="main4" src="2e25a0eb-d464-41cf-9da4-225d1a2c6ee7.png" alt="JadeBeauty Logo-Tasse">
-  <div class="thumbs">
-    <img src="2e25a0eb-d464-41cf-9da4-225d1a2c6ee7.png" onclick="showImage('2e25a0eb-d464-41cf-9da4-225d1a2c6ee7.png', 'main4')">
-    <img src="039d45f9-63b0-44a2-853d-bb5729f8a66a.png" onclick="showImage('039d45f9-63b0-44a2-853d-bb5729f8a66a.png', 'main4')">
-    <img src="0265bd5d-2f90-480e-879a-86ebd8beca76.png" onclick="showImage('0265bd5d-2f90-480e-879a-86ebd8beca76.png', 'main4')">
-    <img src="53c674f2-7159-4179-aed7-25f232434fb5.png" onclick="showImage('53c674f2-7159-4179-aed7-25f232434fb5.png', 'main4')">
-  </div>
-  <p class="price">14,95 €</p>
-</div>
-</div>
+  <header>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="shop.html" aria-current="page">Shop</a>
+      <a href="anleitung.html">Anleitung</a>
+      <a href="blog.html">Blog</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <button id="dark-toggle" class="toggle-btn" aria-label="Darkmode umschalten">🌙</button>
+  </header>
+
+  <main>
+    <h1>Shop</h1>
+    <div class="produkte">
+      <article class="produkt">
+        <img src="assets/img/kosmetiktasche.jpg" alt="Kosmetiktasche mit JadeBeauty Logo" />
+        <h3>Kosmetiktasche</h3>
+        <p>Für deine Selfcare-Routine.</p>
+        <p class="preis">€17,95</p>
+        <p class="bewertung">⭐ 4,8 (37 Bewertungen)</p>
+        <a href="#" class="cta-button" role="button">Jetzt kaufen</a>
+      </article>
+
+      <article class="produkt">
+        <span class="label jetzt-neu">✨ Jetzt neu!</span>
+        <img src="assets/img/color-change-mug-handle-right.jpg" alt="Color Changing Mug mit Henkel rechts" />
+        <h3>Tasse: Glow From Within</h3>
+        <p>Beginne deinen Tag mit Stil.</p>
+        <p class="preis">€15,95</p>
+        <p class="bewertung">⭐ 4,9 (58x gekauft)</p>
+        <a href="#" class="cta-button" role="button">Jetzt kaufen</a>
+      </article>
+
+      <article class="produkt">
+        <span class="label vegan">✅ 100 % vegan</span>
+        <img src="assets/img/white-sage-candle-closed.jpg" alt="Duftkerze White Sage" />
+        <h3>Duftkerze White Sage</h3>
+        <p>Entspannung pur.</p>
+        <p class="preis">€19,95</p>
+        <p class="bewertung">⭐ 5,0 (112 Bewertungen)</p>
+        <a href="#" class="cta-button" role="button">Jetzt kaufen</a>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 JadeBeauty | <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+  </footer>
 </body>
 </html>
