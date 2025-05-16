@@ -1,104 +1,59 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <title>JadeBeauty – Glow From Within</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Glow From Within mit Gua Sha, Selfcare & natürlichen Produkten von JadeBeauty.">
-  <link rel="stylesheet" href="style.css" />
-  <script src="darkmode.js" defer></script>
-  <script src="lightbox.js" defer></script>
-</head>
-<body>
-  <header>
-    <nav>
-      <a href="index.html" aria-current="page">Start</a>
-      <a href="shop.html">Shop</a>
-      <a href="anleitung.html">Anleitung</a>
-      <a href="blog.html">Blog</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-    <button id="dark-toggle" class="toggle-btn" aria-label="Darkmode umschalten">🌙</button>
-  </header>
+.produkte {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: stretch; /* sorgt dafür, dass alle Produktboxen gleich hoch sind */
+}
 
-  <main>
-    <section class="warum-jadebeauty">
-      <h1>Warum JadeBeauty?</h1>
-      <div class="vorteile-grid">
-        <div class="vorteil-box">
-          <div class="icon">💎</div>
-          <h3>Handgefertigte Qualität</h3>
-          <p>Natürlicher Jade-Stein, liebevoll gefertigt für deine Haut.</p>
-        </div>
-        <div class="vorteil-box">
-          <div class="icon">🌿</div>
-          <h3>Natürliche Schönheit</h3>
-          <p>Fördert deinen natürlichen Glow und gesunde Haut.</p>
-        </div>
-        <div class="vorteil-box">
-          <div class="icon">💆‍♀️</div>
-          <h3>Entspannung & Wellness</h3>
-          <p>Traditionelle Gua Sha Technik für Gesicht und Geist.</p>
-        </div>
-        <div class="vorteil-box">
-          <div class="icon">🌱</div>
-          <h3>100% Vegan & Nachhaltig</h3>
-          <p>Umweltbewusst produziert und frei von Tierversuchen.</p>
-        </div>
-        <div class="vorteil-box">
-          <div class="icon">✨</div>
-          <h3>Easy Anwendung</h3>
-          <p>Ideal für deine tägliche Selfcare-Routine – schnell & effektiv.</p>
-        </div>
-      </div>
-    </section>
+.produkt {
+  flex: 1 1 280px;
+  border: 1px solid var(--jade-green-light);
+  border-radius: 12px;
+  padding: 1rem;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(96,159,133,0.2);
+  transition: box-shadow 0.3s ease;
+  height: 430px; /* Einheitliche Höhe für alle Produktboxen */
+}
 
-    <section>
-      <h2>Unsere Highlights</h2>
-      <div class="produkte">
-        <article class="produkt">
-          <img src="assets/img/kosmetiktasche.jpg" alt="Kosmetiktasche mit JadeBeauty Logo" />
-          <h3>Kosmetiktasche</h3>
-          <p>Für deine Selfcare-Routine.</p>
-          <p class="preis">€17,95</p>
-          <p class="bewertung">⭐ 4,8 (37 Bewertungen)</p>
-          <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
-        </article>
+.produkt img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+  max-height: 180px; /* gleiche Bildhöhe */
+  margin-bottom: 1rem;
+}
 
-        <article class="produkt">
-          <span class="label jetzt-neu">✨ Jetzt neu!</span>
-          <img src="assets/img/color-change-mug-handle-right.jpg" alt="Color Changing Mug mit Henkel rechts" />
-          <h3>Tasse: Glow From Within</h3>
-          <p>Beginne deinen Tag mit Stil.</p>
-          <p class="preis">€15,95</p>
-          <p class="bewertung">⭐ 4,9 (58x gekauft)</p>
-          <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
-        </article>
+h3 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  color: var(--jade-green-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
-        <article class="produkt">
-          <span class="label vegan">✅ 100 % vegan</span>
-          <img src="assets/img/white-sage-candle-closed.jpg" alt="Duftkerze White Sage" />
-          <h3>Duftkerze White Sage</h3>
-          <p>Entspannung pur.</p>
-          <p class="preis">€19,95</p>
-          <p class="bewertung">⭐ 5,0 (112 Bewertungen)</p>
-          <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
-        </article>
-      </div>
-    </section>
+.thermal-label {
+  font-size: 0.9rem;
+  color: var(--jade-green);
+  background-color: var(--jade-green-light);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(96,159,133,0.3);
+}
 
-    <section>
-      <h2>Inspiration</h2>
-      <div class="inspirationen">
-        <img src="assets/img/inspiration1.png" alt="Inspiration 1" class="lightbox" tabindex="0" />
-        <img src="assets/img/inspiration2.png" alt="Inspiration 2" class="lightbox" tabindex="0" />
-        <img src="assets/img/inspiration3.png" alt="Inspiration 3" class="lightbox" tabindex="0" />
-      </div>
-    </section>
-  </main>
+.bewertung {
+  font-size: 1rem;
+  color: #f5a623; /* goldgelb für Sterne */
+  margin-top: 0.3rem;
+}
 
-  <footer>
-    <p>&copy; 2025 JadeBeauty | <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
-  </footer>
-</body>
-</html>
+.bewertungs-text {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
