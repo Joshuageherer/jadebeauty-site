@@ -2,12 +2,42 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>JadeBeauty – Blog</title>
+  <title>JadeBeauty – Gua Sha Anleitung & Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="JadeBeauty Blog mit Tipps und News zu natürlicher Schönheit." />
+  <meta name="description" content="Anleitung für Gua Sha mit JadeStein – Schritt für Schritt mit Bildern.">
   <link rel="stylesheet" href="style.css" />
   <script src="darkmode.js" defer></script>
   <script src="lightbox.js" defer></script>
+  <style>
+    .guasha-step {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .guasha-step img {
+      max-width: 180px;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+    .guasha-step p {
+      font-size: 1.1rem;
+      color: var(--text);
+      max-width: 600px;
+      margin: 0;
+    }
+    /* Für kleine Bildschirme */
+    @media (max-width: 600px) {
+      .guasha-step {
+        flex-direction: column;
+        text-align: center;
+      }
+      .guasha-step p {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -22,17 +52,36 @@
   </header>
 
   <main>
-    <h1>Blog</h1>
     <article class="blog-post">
-      <h2>Gua Sha richtig anwenden: Die 5 besten Tipps</h2>
-      <p>Erfahre, wie du mit Jade Gua Sha den Lymphfluss anregst und deinen Glow erhöhst...</p>
-      <a href="#" class="cta-button" role="button">Weiterlesen</a>
-    </article>
+      <h1>Gua Sha richtig anwenden: Die 5 besten Tipps für deine Gesichtspflege</h1>
+      <p>Gua Sha ist eine wundervolle Methode, um deine Haut zu beleben, Verspannungen zu lösen und deinem Gesicht einen natürlichen Glow zu verleihen. Mit unseren Tipps gelingt dir die Anwendung perfekt!</p>
 
-    <article class="blog-post">
-      <h2>Warum natürliche Produkte wichtig sind</h2>
-      <p>Wir erklären, warum natürliche Inhaltsstoffe deiner Haut guttun und welche Vorteile JadeBeauty bietet...</p>
-      <a href="#" class="cta-button" role="button">Weiterlesen</a>
+      <div class="guasha-step">
+        <img src="assets/img/guasha_step1.png" alt="Gua Sha Schritt 1: Stirn" />
+        <p><strong>Gua Sha Schritt 1: Stirn</strong><br />Sanft den Stein von der Mitte der Stirn zu den Schläfen führen. Dies fördert die Durchblutung und entspannt die Stirnmuskulatur.</p>
+      </div>
+
+      <div class="guasha-step">
+        <img src="assets/img/guasha_step2.png" alt="Gua Sha Schritt 2: Augenbereich" />
+        <p><strong>Gua Sha Schritt 2: Augenbereich</strong><br />Den Stein vorsichtig unter den Augen entlangführen – vom inneren Augenwinkel nach außen. Das hilft, Schwellungen zu reduzieren und die Haut zu straffen.</p>
+      </div>
+
+      <div class="guasha-step">
+        <img src="assets/img/guasha_step3.png" alt="Gua Sha Schritt 3: Wangen" />
+        <p><strong>Gua Sha Schritt 3: Wangen</strong><br />Mit leichtem Druck von der Nasenwurzel zu den Ohren streichen. So wird der Lymphfluss angeregt und die Haut erhält mehr Glow.</p>
+      </div>
+
+      <div class="guasha-step">
+        <img src="assets/img/guasha_step4.png" alt="Gua Sha Schritt 4: Kieferlinie" />
+        <p><strong>Gua Sha Schritt 4: Kieferlinie</strong><br />Den Stein entlang der Kieferlinie von unten nach oben bis zu den Ohren bewegen. Dies hilft, Spannungen zu lösen und die Konturen zu definieren.</p>
+      </div>
+
+      <div class="guasha-step">
+        <img src="assets/img/guasha_step5.png" alt="Gua Sha Schritt 5: Hals" />
+        <p><strong>Gua Sha Schritt 5: Hals</strong><br />Zum Schluss den Hals mit sanften Aufwärtsbewegungen massieren – vom Schlüsselbein Richtung Kinn. Das unterstützt die Lymphdrainage und sorgt für ein frisches Gefühl.</p>
+      </div>
+
+      <p>Viel Spaß beim Verwöhnen deiner Haut mit deinem JadeBeauty Gua Sha Stein! ✨</p>
     </article>
   </main>
 
