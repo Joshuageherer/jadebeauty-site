@@ -1,9 +1,8 @@
 :root {
-  --bg: #e6f1eb; /* leicht jadegrün */
-  --text: #2f4f3f; /* dunkles Grün */
-  --accent: #609f85; /* Akzent grün */
-  --gold: #4b784f; /* dunkleres Gold */
-  --hover-shadow: rgba(0, 0, 0, 0.12);
+  --bg: #e5f0e8;
+  --text: #1f3d27;
+  --accent: #609f85;
+  --gold: #4d7c4f;
 }
 
 [data-theme="dark"] {
@@ -18,31 +17,45 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-/* HEADER */
+/* HEADER mit Navigation und Button */
 header {
   position: sticky;
   top: 0;
   background: var(--bg);
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Navigation links, Button rechts */
   align-items: center;
-  border-bottom: 1px solid #a0b3a0;
+  border-bottom: 1px solid #ccc;
   z-index: 1000;
 }
 
-/* NAVIGATION */
+/* NAV Container */
 header nav {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   flex-grow: 1;
   justify-content: center;
+  align-items: center;
 }
 
+/* Logo */
+.logo {
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+
+/* Logo Link */
+.logo-link {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+/* NAV Links */
 nav a {
   text-decoration: none;
   color: var(--text);
@@ -52,11 +65,9 @@ nav a {
   transition: background-color 0.3s;
 }
 
-nav a:hover,
-nav a:focus {
+nav a:hover {
   background-color: var(--accent);
   color: white;
-  outline: none;
 }
 
 /* Darkmode Button */
@@ -67,245 +78,174 @@ nav a:focus {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   transition: background-color 0.3s;
   flex-shrink: 0;
-  margin-left: 1rem;
 }
 
-.toggle-btn:hover,
-.toggle-btn:focus {
+.toggle-btn:hover {
   background-color: var(--gold);
   color: var(--text);
-  outline: none;
 }
 
-/* MAIN */
+/* MAIN Content */
 main {
   max-width: 1000px;
-  margin: 2rem auto 3rem;
-  padding: 0 1rem;
+  margin: auto;
+  padding: 2rem;
 }
 
-/* Überschriften zentrieren */
-h1, h2 {
-  text-align: center;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 1.5rem;
-}
-
-/* WARUM JADEBEAUTY */
+/* Warum JadeBeauty */
 .warum-jadebeauty {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-bottom: 3rem;
 }
 
-.vorteile-box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 .vorteile-box {
-  background-color: #a4c6b8;
-  color: var(--text);
-  padding: 1.5rem 1.25rem;
-  border-radius: 10px;
+  background-color: var(--accent);
+  color: white;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  flex: 1 1 300px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
   font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  box-shadow: 0 3px 8px var(--hover-shadow);
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  gap: 0.8rem;
 }
 
-.vorteile-box:hover {
-  transform: scale(1.04);
+.vorteile-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
-.vorteile-box:focus {
-  outline: 3px solid var(--accent);
-  outline-offset: 3px;
-  transform: scale(1.04);
+.vorteile-box li {
+  margin: 0.6rem 0;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
-.vorteile-box .icon {
-  font-size: 1.8rem;
-  flex-shrink: 0;
-}
-
-.vorteile-box-fullwidth {
-  grid-column: 1 / -1;
-}
-
-/* PRODUKT LABELS */
-.label {
-  background-color: #a4c6b8;
-  color: var(--text);
-  font-weight: 600;
-  padding: 0.3rem 1rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  text-align: center;
-  box-shadow: 0 3px 6px var(--hover-shadow);
-  user-select: none;
-  display: inline-block;
-  margin-bottom: 0.5rem;
-}
-
-.thermo-label {
-  background-color: #7a9d82; /* dunkleres Grün für Thermo */
-  margin-bottom: 0.8rem;
-}
-
-.vegan-label {
-  background-color: #88c77b; /* frisches Grün für Vegan */
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 1rem;
-  color: white;
-  margin-bottom: 0.8rem;
-  display: inline-block;
-}
-
-/* PRODUKTE */
+/* Unsere Highlights */
 .produkte {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 3rem;
 }
 
 .produkt {
-  background: white;
-  border-radius: 12px;
-  padding: 1.25rem 1rem 2rem;
-  box-shadow: 0 6px 12px var(--hover-shadow);
   flex: 1 1 280px;
-  max-width: 280px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  background: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  justify-content: flex-start;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  min-height: 480px; /* Einheitliche Höhe für alle Produkte */
 }
 
-.produkt:hover,
-.produkt:focus-within {
+.produkt:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 18px var(--hover-shadow);
-  outline: none;
+  box-shadow: 0 12px 20px rgb(0 0 0 / 0.12);
 }
 
 .produkt img {
   width: 100%;
-  max-height: 250px;
-  object-fit: contain;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  object-fit: contain;
+  max-height: 230px;
 }
 
 .produkt h3 {
-  font-weight: 700;
-  margin: 0 0 0.25rem;
+  margin: 1rem 0 0.3rem 0;
   color: var(--text);
 }
 
 .produkt p {
   margin: 0.3rem 0;
-  color: #425e4a;
+  color: var(--text);
 }
 
 .preis {
-  font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
   margin-top: 0.5rem;
-  color: var(--text);
 }
 
 .bewertung {
-  color: #718675;
-  font-size: 0.9rem;
-  margin-top: 0.2rem;
-  user-select: none;
+  font-size: 0.85rem;
+  color: #6b705c;
+  margin-top: 0.3rem;
 }
 
-/* Sterne als Icons */
-.bewertung .star {
-  color: #a1b59c;
-  font-size: 1.2rem;
-  margin-right: 0.1rem;
-  user-select: none;
-}
-
-.bewertung .star.full {
-  color: #4b784f;
-}
-
-/* CTA Button */
 .cta-button {
-  margin-top: auto;
-  background-color: var(--accent);
+  margin-top: 1rem;
+  background: var(--accent);
   color: white;
-  padding: 0.6rem 1.1rem;
-  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
   text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover,
-.cta-button:focus {
-  background-color: var(--gold);
-  color: var(--text);
-  outline: none;
-}
-
-/* ANLEITUNG TEXT */
-.anleitung-text {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  font-size: 1.1rem;
-  color: var(--text);
   text-align: center;
+  align-self: flex-start;
+  cursor: pointer;
 }
 
-/* INSPIRATIONEN */
+/* Labels Thermo & Vegan */
+.label {
+  display: inline-block;
+  background-color: #a2c4a6;
+  color: #2d5d34;
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.label.thermo {
+  background-color: #b1d4bb;
+  color: #2a563b;
+}
+
+.label.vegan {
+  background-color: #9dc0a8;
+  color: #26402f;
+}
+
+/* Inspirationen */
 .inspirationen {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
   gap: 1rem;
-  margin-top: 3rem;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 1rem;
 }
 
 .inspirationen img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  width: 300px;
   border-radius: 12px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
-.inspirationen img:hover,
-.inspirationen img:focus {
-  transform: scale(1.04);
-  outline: none;
-}
-
-/* FOOTER */
+/* Footer */
 footer {
-  margin-top: 4rem;
-  padding: 1rem;
-  border-top: 1px solid #a0b3a0;
+  margin-top: 3rem;
   text-align: center;
-  color: var(--text);
+  padding: 1rem;
+  border-top: 1px solid #ccc;
 }
