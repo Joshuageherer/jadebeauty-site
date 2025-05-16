@@ -135,13 +135,6 @@ main {
 }
 
 /* PRODUKT LABELS */
-.label-row {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 1rem;
-}
-
 .label {
   background-color: #a4c6b8;
   color: var(--text);
@@ -152,22 +145,25 @@ main {
   text-align: center;
   box-shadow: 0 3px 6px var(--hover-shadow);
   user-select: none;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 .thermo-label {
-  margin-right: auto;
+  background-color: #7a9d82; /* dunkleres Grün für Thermo */
+  margin-bottom: 0.8rem;
 }
 
 .vegan-label {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.vegan-label::before {
-  content: "🌿";
-  font-size: 1.2rem;
+  background-color: #88c77b; /* frisches Grün für Vegan */
+  padding: 0.3rem 0.8rem;
+  width: 30px;
+  font-size: 1.3rem;
+  line-height: 1;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  color: white;
 }
 
 /* PRODUKTE */
