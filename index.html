@@ -1,101 +1,251 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <title>JadeBeauty – Glow From Within</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Glow From Within mit Gua Sha, Selfcare & natürlichen Produkten von JadeBeauty.">
-  <link rel="stylesheet" href="style.css" />
-  <script src="darkmode.js" defer></script>
-  <script src="lightbox.js" defer></script>
-</head>
-<body>
-  <header>
-    <nav>
-      <a href="index.html" class="logo-link">
-        <img src="assets/img/jadebeauty_logo_transparent.png" alt="JadeBeauty Logo" class="logo" />
-      </a>
-      <a href="index.html">Start</a>
-      <a href="shop.html">Shop</a>
-      <a href="anleitung.html">Anleitung</a>
-      <a href="blog.html">Blog</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-    <button id="dark-toggle" class="toggle-btn" aria-label="Darkmode umschalten">🌙</button>
-  </header>
+:root {
+  --bg: #e5f0e8;
+  --text: #1f3d27;
+  --accent: #609f85;
+  --gold: #4d7c4f;
+}
 
-  <main>
-    <section class="warum-jadebeauty">
-      <h1>Warum JadeBeauty?</h1>
-      <div class="vorteile-box">
-        <ul>
-          <li>✨ Handgefertigte Produkte aus natürlichem Jade – für deine Haut nur das Beste.</li>
-          <li>🌿 Fördert die natürliche Schönheit und sorgt für einen strahlenden Teint.</li>
-          <li>💆‍♀️ Entspannt Gesicht und Geist mit traditioneller Gua Sha Technik.</li>
-          <li>🌱 100% vegan, tierversuchsfrei und nachhaltig produziert.</li>
-          <li>💚 Perfekt für deine tägliche Selfcare-Routine, einfach anzuwenden und effektiv.</li>
-        </ul>
-      </div>
-    </section>
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #eee;
+  --accent: #88d9bf;
+  --gold: #f0d98b;
+}
 
-    <section>
-      <h2>Unsere Highlights</h2>
-      <div class="produkte">
-        <article class="produkt">
-          <img src="assets/img/kosmetiktasche.jpg" alt="Kosmetiktasche mit JadeBeauty Logo" />
-          <h3>Kosmetiktasche</h3>
-          <p>Für deine Selfcare-Routine.</p>
-          <p class="preis">€18,95</p>
-          <p class="bewertung">⭐ 4,8 (37 Bewertungen)</p>
-          <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
-        </article>
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        <article class="produkt">
-          <span class="label thermo">Thermo-Funktion</span>
-          <img src="assets/img/color-change-mug-handle-right.jpg" alt="Farbwechsel Tasse Glow From Within" />
-          <h3>Farbwechsel Tasse</h3>
-          <p>Beginne deinen Tag mit Stil.</p>
-          <p class="preis">€16,95</p>
-          <p class="bewertung">⭐ 4,9 (58 Bewertungen)</p>
-          <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
-        </article>
+/* HEADER mit Navigation und Button */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between; /* Navigation links, Button rechts */
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+}
 
-        <article class="produkt">
-          <span class="label vegan">✅ 100% Vegan</span>
-          <img src="assets/img/white-sage-candle-closed.jpg" alt="Duftkerze White Sage" />
-          <h3>Duftkerze White Sage</h3>
-          <p>Entspannung pur.</p>
-          <p class="preis">€17,95</p>
-          <p class="bewertung">⭐ 5,0 (112 Bewertungen)</p>
-          <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
-        </article>
+/* NAV Container */
+header nav {
+  display: flex;
+  gap: 1rem;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
 
-        <article class="produkt">
-          <img src="assets/img/tasche.jpg" alt="JadeBeauty Tasche" />
-          <h3>JadeBeauty Tasche</h3>
-          <p>Stylish und praktisch.</p>
-          <p class="preis">€19,50</p>
-          <p class="bewertung">⭐ 4,7 (29 Bewertungen)</p>
-          <a href="shop.html" class="cta-button" role="button">Zum Shop</a>
-        </article>
-      </div>
-    </section>
+/* Logo */
+.logo {
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
 
-    <section>
-      <h2>Inspiration</h2>
-      <div class="inspirationen">
-        <img src="assets/img/inspiration1.png" alt="Inspiration 1" class="lightbox" tabindex="0" />
-        <img src="assets/img/inspiration2.png" alt="Inspiration 2" class="lightbox" tabindex="0" />
-        <img src="assets/img/inspiration3.png" alt="Inspiration 3" class="lightbox" tabindex="0" />
-        <img src="assets/img/inspiration4.png" alt="Inspiration 4" class="lightbox" tabindex="0" />
-        <img src="assets/img/inspiration5.png" alt="Inspiration 5" class="lightbox" tabindex="0" />
-        <img src="assets/img/inspiration6.png" alt="Inspiration 6" class="lightbox" tabindex="0" />
-      </div>
-    </section>
-  </main>
+/* Logo Link */
+.logo-link {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
 
-  <footer>
-    <p>&copy; 2025 JadeBeauty | <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
-  </footer>
-</body>
-</html>
+/* NAV Links */
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* Darkmode Button */
+.toggle-btn {
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+  flex-shrink: 0;
+}
+
+.toggle-btn:hover {
+  background-color: var(--gold);
+  color: var(--text);
+}
+
+/* MAIN Content */
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Warum JadeBeauty */
+.warum-jadebeauty {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.vorteile-box {
+  background-color: var(--accent);
+  color: white;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  flex: 1 1 300px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.vorteile-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.vorteile-box li {
+  margin: 0.6rem 0;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Unsere Highlights */
+.produkte {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.produkt {
+  flex: 1 1 280px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produkt:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgb(0 0 0 / 0.12);
+}
+
+.produkt img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+  max-height: 230px;
+}
+
+.produkt h3 {
+  margin: 1rem 0 0.3rem 0;
+  color: var(--text);
+}
+
+.produkt p {
+  margin: 0.3rem 0;
+  color: var(--text);
+}
+
+.preis {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.bewertung {
+  font-size: 0.85rem;
+  color: #6b705c;
+  margin-top: 0.3rem;
+}
+
+.cta-button {
+  margin-top: 1rem;
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+/* Labels Thermo & Vegan */
+.label {
+  display: inline-block;
+  background-color: #a2c4a6;
+  color: #2d5d34;
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.label.thermo {
+  background-color: #b1d4bb;
+  color: #2a563b;
+}
+
+.label.vegan {
+  background-color: #9dc0a8;
+  color: #26402f;
+}
+
+/* Inspirationen */
+.inspirationen {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.inspirationen img {
+  width: 300px;
+  border-radius: 12px;
+  cursor: pointer;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+}
