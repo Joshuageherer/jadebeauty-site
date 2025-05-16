@@ -1,13 +1,13 @@
 :root {
-  --bg: #e6f0e9; /* leicht grünlich, jade Style */
-  --text: #1f3d26;
-  --accent: #609f85;
-  --gold: #4b7a53; /* dunkles Grün statt Gelb */
+  --bg: #e3f0e3; /* leicht grünlicher Hintergrund */
+  --text: #25462d; /* dunkles Jadegrün für Text */
+  --accent: #6fa87f; /* helleres Grün für Akzente */
+  --gold: #d4af37;
 }
 
 [data-theme="dark"] {
   --bg: #121212;
-  --text: #eee;
+  --text: #d8e8d8;
   --accent: #88d9bf;
   --gold: #f0d98b;
 }
@@ -19,26 +19,24 @@ body {
   font-family: sans-serif;
 }
 
-/* HEADER mit Navigation und Button */
+/* HEADER */
 header {
   position: sticky;
   top: 0;
   background: var(--bg);
   padding: 1rem 2rem;
   display: flex;
-  justify-content: center; /* Navigation mittig */
+  justify-content: center; /* Navi mittig */
   align-items: center;
   border-bottom: 1px solid #ccc;
   z-index: 1000;
 }
 
-/* NAV Container */
 header nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-/* NAV Links */
 nav a {
   text-decoration: none;
   color: var(--text);
@@ -53,7 +51,6 @@ nav a:hover {
   color: white;
 }
 
-/* Darkmode Button */
 .toggle-btn {
   background: var(--accent);
   color: white;
@@ -71,100 +68,69 @@ nav a:hover {
   color: var(--text);
 }
 
-/* MAIN Content zentriert, max Breite */
+/* MAIN */
 main {
   max-width: 1000px;
   margin: auto;
   padding: 2rem;
-  text-align: center;
 }
 
-/* PRODUKTE Grid */
-.produkte {
+/* Warum JadeBeauty */
+.section-title {
+  text-align: center;
+  color: var(--text);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.warum-jadebeauty {
   display: flex;
-  gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: stretch; /* gleiche Höhe der Produktboxen */
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
-.produkt {
+.warum-box {
+  background-color: #9ec3a0;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
   flex: 1 1 280px;
   max-width: 280px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 1rem;
-  background: var(--bg);
+  color: var(--text);
+  font-weight: 600;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Preis und Button unten */
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.produkt:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.produkt img {
-  width: 100%;
-  max-height: 280px; /* Einheitliche Höhe */
-  object-fit: cover;  /* Bild proportional zuschneiden */
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.label {
-  color: var(--gold);
-  font-weight: bold;
-  margin-bottom: 0.3rem;
-  background-color: #cce5d9;
-  border-radius: 6px;
-  padding: 0.15rem 0.6rem;
-  font-size: 0.85rem;
-  display: inline-block;
-  margin-bottom: 1rem;
-}
-
-.preis {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-top: 0.5rem;
-  color: var(--text);
-}
-
-.bewertung {
-  font-size: 0.9rem;
-  color: #3c5a35; /* dezente dunkle grüne Farbe */
-  margin-top: 0.3rem;
-}
-
-.sterne {
-  color: var(--gold);
-  font-size: 1rem;
-  margin-right: 2px;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
   user-select: none;
+  transition: transform 0.15s ease;
 }
 
-.cta-button {
-  display: inline-block;
-  margin-top: 1rem;
-  background: var(--accent);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-  text-align: center;
-  transition: background-color 0.3s;
+.warum-box:hover {
+  animation: wiggleOnce 0.3s ease forwards;
 }
 
-.cta-button:hover {
-  background-color: var(--gold);
-  color: var(--text);
+@keyframes wiggleOnce {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(2deg); }
+  50%  { transform: rotate(-2deg); }
+  75%  { transform: rotate(1deg); }
+  100% { transform: rotate(0deg); }
 }
 
-/* Labels über Produktbox */
+.warum-box-large {
+  max-width: 600px;
+}
+
+/* Warum JadeBeauty Icons */
+.warum-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+/* Unsere Highlights */
 .label-ueber {
   text-align: center;
   margin-bottom: 1rem;
@@ -179,73 +145,96 @@ main {
   font-size: 0.9rem;
 }
 
-/* WHY JadeBeauty Boxen */
-.warum-jadebeauty {
+.label-vegan {
+  max-width: 150px;
+}
+
+/* Produkte Grid */
+.produkte {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
+  gap: 2rem;
 }
 
-.warum-box {
-  background-color: #a3c7b3;
-  border-radius: 12px;
-  padding: 1rem 1.5rem;
+.produkt {
   flex: 1 1 280px;
-  max-width: 280px;
-  color: var(--text);
-  font-weight: 600;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  background: var(--bg);
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  gap: 0.75rem;
-  cursor: default;
-  user-select: none;
-  transition: transform 0.3s ease;
+  text-align: center;
+  min-height: 420px; /* Einheitliche Höhe */
+  box-shadow: 0 0 6px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
-.warum-box:hover {
-  transform: translateY(-3px);
+.produkt:hover {
+  box-shadow: 0 0 14px var(--accent);
 }
 
-.warum-icon {
-  font-size: 1.8rem;
-  flex-shrink: 0;
+.produkt img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
-/* Inspirationen */
+.preis {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: var(--text);
+}
+
+.bewertung {
+  font-size: 0.9rem;
+  color: #3d6c48;
+  margin-top: 0.3rem;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--gold);
+  color: var(--text);
+}
+
+/* Inspiration */
 .inspirationen {
   display: flex;
+  flex-wrap: nowrap;
   gap: 1rem;
   margin-top: 2rem;
   justify-content: center;
-  flex-wrap: nowrap;
   overflow-x: auto;
-  padding-bottom: 1rem;
 }
 
 .inspirationen img {
-  max-width: 300px;
-  height: 200px;
+  flex: 0 0 auto;
+  width: 300px;
   border-radius: 12px;
   cursor: pointer;
   object-fit: cover;
-  flex-shrink: 0;
-  user-select: none;
+  transition: transform 0.3s ease;
 }
 
-/* Scrollbar Design für Inspiration */
-.inspirationen::-webkit-scrollbar {
-  height: 10px;
-}
-
-.inspirationen::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.inspirationen::-webkit-scrollbar-thumb {
-  background-color: var(--accent);
-  border-radius: 10px;
+.inspirationen img:hover {
+  transform: scale(1.05);
 }
 
 /* Footer */
