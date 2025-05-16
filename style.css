@@ -87,9 +87,16 @@ main {
   padding: 0 1rem;
 }
 
+/* Überschriften zentrieren */
+h1, h2 {
+  text-align: center;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
 /* WARUM JADEBEAUTY */
 .warum-jadebeauty {
-  text-align: center;
   margin-bottom: 3rem;
 }
 
@@ -157,13 +164,11 @@ main {
 .vegan-label {
   background-color: #88c77b; /* frisches Grün für Vegan */
   padding: 0.3rem 0.8rem;
-  width: 30px;
-  font-size: 1.3rem;
-  line-height: 1;
-  border-radius: 50%;
-  text-align: center;
-  margin-bottom: 0.8rem;
+  border-radius: 20px;
+  font-size: 1rem;
   color: white;
+  margin-bottom: 0.8rem;
+  display: inline-block;
 }
 
 /* PRODUKTE */
@@ -187,6 +192,7 @@ main {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  min-height: 480px; /* Einheitliche Höhe für alle Produkte */
 }
 
 .produkt:hover,
@@ -258,6 +264,15 @@ main {
   background-color: var(--gold);
   color: var(--text);
   outline: none;
+}
+
+/* ANLEITUNG TEXT */
+.anleitung-text {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-align: center;
 }
 
 /* INSPIRATIONEN */
