@@ -2,12 +2,47 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>JadeBeauty – Anleitung</title>
+  <title>JadeBeauty – Gua Sha Anleitung</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Anleitung zur Anwendung von Jade Gua Sha für deine Schönheit." />
+  <meta name="description" content="Schritt-für-Schritt Anleitung für die Gua Sha Anwendung mit JadeBeauty Produkten." />
   <link rel="stylesheet" href="style.css" />
   <script src="darkmode.js" defer></script>
   <script src="lightbox.js" defer></script>
+  <style>
+    .guasha-step {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .guasha-step img {
+      max-width: 180px;
+      border-radius: 12px;
+      flex-shrink: 0;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .guasha-step img:hover {
+      transform: scale(1.05);
+    }
+    .guasha-step p {
+      font-size: 1.1rem;
+      color: var(--text);
+      max-width: 600px;
+      margin: 0;
+    }
+    @media (max-width: 600px) {
+      .guasha-step {
+        flex-direction: column;
+        text-align: center;
+      }
+      .guasha-step p {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -22,25 +57,37 @@
   </header>
 
   <main>
-    <h1>Anleitung & Tipps</h1>
-    <section>
-      <h2>So wendest du Jade Gua Sha richtig an</h2>
-      <ol>
-        <li>Reinige dein Gesicht gründlich.</li>
-        <li>Nutze das Gua Sha Tool sanft entlang der Lymphbahnen.</li>
-        <li>Massiere in Richtung Herz für bessere Durchblutung.</li>
-        <li>Verwende regelmäßig für strahlende Haut.</li>
-      </ol>
-    </section>
+    <article class="blog-post">
+      <h1>Gua Sha Schritt-für-Schritt Anleitung</h1>
+      <p>Entdecke, wie du mit deinem JadeBeauty Gua Sha Stein in nur wenigen Schritten für strahlende Haut und Entspannung sorgst. Folge den klaren Bildern und Anweisungen!</p>
 
-    <section>
-      <h2>Tipps für deine Selfcare-Routine</h2>
-      <ul>
-        <li>Trinke viel Wasser für natürliche Hydration.</li>
-        <li>Nutze sanfte, natürliche Produkte.</li>
-        <li>Gönn dir regelmäßig Pausen und Entspannung.</li>
-      </ul>
-    </section>
+      <div class="guasha-step">
+        <img src="assets/img/guasha_step1.png" alt="Gua Sha Schritt 1: Stirn" class="lightbox" tabindex="0" />
+        <p><strong>Schritt 1: Stirn</strong><br />Sanft den Stein von der Mitte der Stirn zu den Schläfen führen.</p>
+      </div>
+
+      <div class="guasha-step">
+        <img src="assets/img/guasha_step2.png" alt="Gua Sha Schritt 2: Wangen" class="lightbox" tabindex="0" />
+        <p><strong>Schritt 2: Wangen</strong><br />Mit leichtem Druck von der Nasenwurzel zu den Ohren streichen.</p>
+      </div>
+
+      <div class="guasha-step">
+        <img src="assets/img/guasha_step3.png" alt="Gua Sha Schritt 3: Augenbrauen" class="lightbox" tabindex="0" />
+        <p><strong>Schritt 3: Augenbrauen</strong><br />Den Stein vorsichtig unter den Augen entlang vom inneren Augenwinkel nach außen führen.</p>
+      </div>
+
+      <div class="guasha-step">
+        <img src="assets/img/guasha_step4.png" alt="Gua Sha Schritt 4: Kieferlinie" class="lightbox" tabindex="0" />
+        <p><strong>Schritt 4: Kieferlinie</strong><br />Den Stein entlang der Kieferlinie von unten nach oben bis zu den Ohren bewegen.</p>
+      </div>
+
+      <div class="guasha-step">
+        <img src="assets/img/guasha_step5.png" alt="Gua Sha Schritt 5: Hals" class="lightbox" tabindex="0" />
+        <p><strong>Schritt 5: Hals</strong><br />Den Hals mit sanften Aufwärtsbewegungen massieren – vom Schlüsselbein Richtung Kinn.</p>
+      </div>
+
+      <p><em>Wiederhole jeden Schritt 3–5 Mal, jeweils abwechselnd links und rechts.</em></p>
+    </article>
   </main>
 
   <footer>
