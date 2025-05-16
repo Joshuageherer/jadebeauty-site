@@ -1,97 +1,300 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <title>JadeBeauty – Shop</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Shop für natürliche Jade Beautyprodukte von JadeBeauty." />
-  <link rel="stylesheet" href="style.css" />
-  <script src="darkmode.js" defer></script>
-  <script src="lightbox.js" defer></script>
-</head>
-<body>
-  <header>
-    <nav>
-      <a href="index.html">Start</a>
-      <a href="shop.html" aria-current="page">Shop</a>
-      <a href="anleitung.html">Anleitung</a>
-      <a href="blog.html">Blog</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-    <button id="dark-toggle" class="toggle-btn" aria-label="Darkmode umschalten">🌙</button>
-  </header>
+:root {
+  --bg: #e6f1eb; /* leicht jadegrün statt weiß */
+  --text: #2f4f3f; /* dunkler Grünton für Text */
+  --accent: #609f85; /* Akzent grün */
+  --gold: #4b784f; /* dunkleres Gold */
+  --hover-shadow: rgba(0, 0, 0, 0.12);
+}
 
-  <main>
-    <h1>Shop</h1>
-    <div class="produkte">
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #eee;
+  --accent: #88d9bf;
+  --gold: #f0d98b;
+}
 
-      <!-- Kosmetiktasche -->
-      <article class="produkt">
-        <h3>Kosmetiktasche</h3>
-        <div class="produkt-bilder">
-          <img src="assets/img/kosmetiktasche-front.jpg" alt="Kosmetiktasche vorne" class="lightbox" tabindex="0" />
-          <img src="assets/img/kosmetiktasche-back.jpg" alt="Kosmetiktasche hinten" class="lightbox" tabindex="0" />
-        </div>
-        <p>Für deine Selfcare-Routine.</p>
-        <p class="preis">€17,95</p>
-        <p class="bewertung">⭐ 4,8 (37 Bewertungen)</p>
-        <a href="#" class="cta-button" role="button">Jetzt kaufen</a>
-      </article>
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-      <!-- Color Changing Mug -->
-      <article class="produkt">
-        <span class="label jetzt-neu">✨ Jetzt neu!</span>
-        <h3>Tasse: Glow From Within</h3>
-        <div class="produkt-bilder">
-          <img src="assets/img/color-change-mug-handle-right.jpg" alt="Color Changing Mug Henkel rechts" class="lightbox" tabindex="0" />
-          <img src="assets/img/color-change-mug-handle-left.jpg" alt="Color Changing Mug Henkel links" class="lightbox" tabindex="0" />
-          <img src="assets/img/color-change-mug-front.jpg" alt="Color Changing Mug Vorderseite" class="lightbox" tabindex="0" />
-          <img src="assets/img/color-change-mug-back.jpg" alt="Color Changing Mug Rückseite" class="lightbox" tabindex="0" />
-          <img src="assets/img/color-change-function.jpg" alt="Farbwechsel Funktion Tasse" class="lightbox" tabindex="0" />
-        </div>
-        <p>Beginne deinen Tag mit Stil und Farbwechsel.</p>
-        <p class="preis">€15,95</p>
-        <p class="bewertung">⭐ 4,9 (58x gekauft)</p>
-        <a href="#" class="cta-button" role="button">Jetzt kaufen</a>
-      </article>
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #a0b3a0;
+  z-index: 1000;
+}
 
-      <!-- Duftkerze White Sage -->
-      <article class="produkt">
-        <span class="label vegan">✅ 100 % vegan</span>
-        <h3>Duftkerze White Sage</h3>
-        <div class="produkt-bilder">
-          <img src="assets/img/white-sage-candle-closed.jpg" alt="Duftkerze White Sage geschlossen" class="lightbox" tabindex="0" />
-          <img src="assets/img/white-sage-candle-open.jpg" alt="Duftkerze White Sage geöffnet" class="lightbox" tabindex="0" />
-        </div>
-        <p>Entspannung pur.</p>
-        <p class="preis">€19,95</p>
-        <p class="bewertung">⭐ 5,0 (112 Bewertungen)</p>
-        <a href="#" class="cta-button" role="button">Jetzt kaufen</a>
-      </article>
+/* NAVIGATION */
+header nav {
+  display: flex;
+  gap: 2rem;
+  flex-grow: 1;
+  justify-content: center;
+}
 
-      <!-- JadeBeauty Logo Mug -->
-      <article class="produkt">
-        <h3>Tasse mit JadeBeauty Logo</h3>
-        <div class="produkt-bilder">
-          <img src="assets/img/jadebeauty-logo-mug-handle-right.jpg" alt="Tasse JadeBeauty Logo Henkel rechts" class="lightbox" tabindex="0" />
-          <img src="assets/img/jadebeauty-logo-mug-handle-left.jpg" alt="Tasse JadeBeauty Logo Henkel links" class="lightbox" tabindex="0" />
-          <img src="assets/img/jadebeauty-logo-mug-front.jpg" alt="Tasse JadeBeauty Logo Vorderseite" class="lightbox" tabindex="0" />
-          <img src="assets/img/jadebeauty-logo-mug-back.jpg" alt="Tasse JadeBeauty Logo Rückseite" class="lightbox" tabindex="0" />
-        </div>
-        <p>Schlicht und elegant.</p>
-        <p class="preis">€14,95</p>
-        <p class="bewertung">⭐ 4,7 (45 Bewertungen)</p>
-        <a href="#" class="cta-button" role="button">Jetzt kaufen</a>
-      </article>
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
 
-      <!-- (Optional) Weitere Produkte, falls gewünscht -->
-      <!-- Beispiel: Duftkerzen-Set, Gua Sha Tools etc. -->
+nav a:hover,
+nav a:focus {
+  background-color: var(--accent);
+  color: white;
+  outline: none;
+}
 
-    </div>
-  </main>
+/* Darkmode Button */
+.toggle-btn {
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: background-color 0.3s;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
 
-  <footer>
-    <p>&copy; 2025 JadeBeauty | <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
-  </footer>
-</body>
-</html>
+.toggle-btn:hover,
+.toggle-btn:focus {
+  background-color: var(--gold);
+  color: var(--text);
+  outline: none;
+}
+
+/* MAIN */
+main {
+  max-width: 1000px;
+  margin: 2rem auto 3rem;
+  padding: 0 1rem;
+}
+
+/* WARUM JADEBEAUTY */
+.warum-jadebeauty {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.vorteile-box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.vorteile-box {
+  background-color: #a4c6b8;
+  color: var(--text);
+  padding: 1.5rem 1.25rem;
+  border-radius: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 3px 8px var(--hover-shadow);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.vorteile-box:hover {
+  transform: scale(1.04);
+}
+
+.vorteile-box:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  transform: scale(1.04);
+}
+
+.vorteile-box .icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.vorteile-box-fullwidth {
+  grid-column: 1 / -1;
+}
+
+/* PRODUKT LABELS */
+.label-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.label {
+  background-color: #a4c6b8;
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  box-shadow: 0 3px 6px var(--hover-shadow);
+  user-select: none;
+}
+
+.thermo-label {
+  margin-right: auto;
+}
+
+.vegan-label {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.vegan-label::before {
+  content: "🌿";
+  font-size: 1.2rem;
+}
+
+/* PRODUKTE */
+.produkte {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.produkt {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem 1rem 2rem;
+  box-shadow: 0 6px 12px var(--hover-shadow);
+  flex: 1 1 280px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.produkt:hover,
+.produkt:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 18px var(--hover-shadow);
+  outline: none;
+}
+
+.produkt img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.produkt h3 {
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  color: var(--text);
+}
+
+.produkt p {
+  margin: 0.3rem 0;
+  color: #425e4a;
+}
+
+.preis {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: var(--text);
+}
+
+.bewertung {
+  color: #718675;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  user-select: none;
+}
+
+/* Sterne als Icons */
+.bewertung .star {
+  color: #a1b59c;
+  font-size: 1.2rem;
+  margin-right: 0.1rem;
+  user-select: none;
+}
+
+.bewertung .star.full {
+  color: #4b784f;
+}
+
+/* CTA Button */
+.cta-button {
+  margin-top: auto;
+  background-color: var(--accent);
+  color: white;
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: var(--gold);
+  color: var(--text);
+  outline: none;
+}
+
+/* INSPIRATIONEN */
+.inspirationen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inspirationen img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.inspirationen img:hover,
+.inspirationen img:focus {
+  transform: scale(1.04);
+  outline: none;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 4rem;
+  padding: 1rem;
+  border-top: 1px solid #a0b3a0;
+  text-align: center;
+  color: var(--text);
+}
