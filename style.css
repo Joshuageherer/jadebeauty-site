@@ -1,6 +1,6 @@
 :root {
-  --bg: #e6f0e9; /* helles, leicht grünliches Hintergrund */
-  --text: #2f4f4f; /* dunkleres grün-grau für Text */
+  --bg: #e6f0e9; /* leicht grünliches helles Background */
+  --text: #2f4f4f;
   --accent: #609f85; /* jade-grün */
   --gold: #d4af37;
   --hover-shadow: rgba(0, 0, 0, 0.15);
@@ -21,7 +21,7 @@ body {
   font-family: sans-serif;
 }
 
-/* HEADER mit Navigation und Button */
+/* HEADER */
 header {
   position: sticky;
   top: 0;
@@ -34,7 +34,6 @@ header {
   z-index: 1000;
 }
 
-/* NAV Container */
 header nav {
   display: flex;
   gap: 1rem;
@@ -42,7 +41,6 @@ header nav {
   justify-content: center;
 }
 
-/* NAV Links */
 nav a {
   text-decoration: none;
   color: var(--text);
@@ -57,7 +55,6 @@ nav a:hover {
   color: white;
 }
 
-/* Darkmode Button */
 .toggle-btn {
   background: var(--accent);
   color: white;
@@ -75,7 +72,7 @@ nav a:hover {
   color: var(--text);
 }
 
-/* MAIN Content */
+/* MAIN */
 main {
   max-width: 1000px;
   margin: auto;
@@ -124,7 +121,7 @@ main {
   cursor: pointer;
 }
 
-/* PRODUKTE Grid - 2 Reihen, 2 Spalten und zentriert */
+/* PRODUKTE Grid */
 .produkte.zwei-zeilen {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -179,7 +176,7 @@ main {
 }
 
 .thermo-funktion {
-  background-color: #599f86 !important; /* etwas dunkler */
+  background-color: #599f86 !important;
 }
 
 .vegan {
@@ -230,12 +227,16 @@ main {
   background-color: #4a6a4a;
 }
 
-/* Inspirationen - alle Bilder in einer Reihe mit Abstand */
+/* Inspirationen */
 .inspirationen {
   display: flex;
   gap: 1rem;
   justify-content: center;
   margin-top: 3rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .inspirationen img {
