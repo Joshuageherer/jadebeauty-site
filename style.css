@@ -10,88 +10,158 @@
   --accent: #88d9bf;
   --gold: #f0d98b;
 }
+
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: sans-serif;
 }
+
+/* Header und Navigation */
 header {
   position: sticky;
   top: 0;
   background: var(--bg);
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Nav zentrieren */
   align-items: center;
   border-bottom: 1px solid #ccc;
+  gap: 20px; /* Abstand zwischen Nav und Button */
+  z-index: 1000;
 }
+
+/* Navigation Container */
+header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Nav Links */
 nav a {
-  margin: 0 0.75rem;
   text-decoration: none;
   color: var(--text);
   font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+  border-radius: 5px;
 }
+
+nav a:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* Darkmode Button */
 .toggle-btn {
   background: var(--accent);
   color: white;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: auto;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
 }
+
+.toggle-btn:hover {
+  background-color: var(--gold);
+  color: var(--text);
+}
+
 main {
   max-width: 1000px;
   margin: auto;
   padding: 2rem;
 }
+
+/* Produktvorschau mit flexbox */
 .produkte {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  align-items: stretch;
 }
+
+/* Produktboxen mit einheitlicher Höhe und Flexbox für Button */
 .produkt {
   flex: 1 1 280px;
   border: 1px solid #ccc;
   border-radius: 12px;
   padding: 1rem;
   background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+/* Bilder in Produktbox */
 .produkt img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
+  margin-bottom: 1rem;
 }
+
+/* Labels, Preis und Bewertung */
 .label {
   color: var(--gold);
   font-weight: bold;
+  margin-top: 0.5rem;
 }
+
 .preis {
   font-size: 1.1rem;
   font-weight: bold;
+  margin-top: 0.5rem;
 }
+
 .bewertung {
   font-size: 0.9rem;
   color: gray;
+  margin-top: 0.3rem;
 }
+
+/* CTA Button immer unten */
 .cta-button {
   display: inline-block;
-  margin-top: 0.5rem;
+  margin-top: auto;
   background: var(--accent);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s;
 }
+
+.cta-button:hover {
+  background-color: var(--gold);
+  color: var(--text);
+}
+
+/* Inspirationen */
 .inspirationen {
   display: flex;
   gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
+
 .inspirationen img {
   width: 100%;
   max-width: 300px;
+  height: 200px;
   border-radius: 12px;
   cursor: pointer;
+  object-fit: cover;
 }
+
+/* Footer */
 footer {
   margin-top: 3rem;
   text-align: center;
