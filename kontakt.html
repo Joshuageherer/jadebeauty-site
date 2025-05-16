@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="JadeBeauty">
-    <meta name="robots" content="index, follow">
-    <meta name="description" content="Du hast Fragen zu deiner Bestellung oder Produkten? Kontaktiere uns direkt hier.">
-    <title>Kontakt – JadeBeauty</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>JadeBeauty – Kontakt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Kontaktformular und Informationen zu JadeBeauty." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="darkmode.js" defer></script>
+  <script src="lightbox.js" defer></script>
 </head>
 <body>
-<div class="page-container">
-
-<header style="position: sticky; top: 0; background-color: #5a7d66; color: white; padding: 1rem; text-align: center; z-index: 999; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-    <h1>JadeBeauty</h1>
+  <header>
     <nav>
-        <a href="index.html">Startseite</a> |
-        <a href="shop.html">Shop</a> |
-        <a href="blog.html">Blog</a> |
-        <a href="anleitung.html">Anleitung</a> |
-        <a href="kontakt.html">Kontakt</a>
+      <a href="index.html">Start</a>
+      <a href="shop.html">Shop</a>
+      <a href="anleitung.html">Anleitung</a>
+      <a href="blog.html">Blog</a>
+      <a href="kontakt.html" aria-current="page">Kontakt</a>
     </nav>
-</header>
+    <button id="dark-toggle" class="toggle-btn" aria-label="Darkmode umschalten">🌙</button>
+  </header>
 
-<main style="padding: 2rem 1rem; max-width: 960px; margin: auto;" style="padding:2rem; text-align:center;">
-    <h2>Kontaktiere uns</h2>
-    <p>Schreib uns bei Fragen oder Anfragen zu unseren Produkten.</p>
-    <p>Email: <a href="mailto:kontakt@jadebeauty.at">kontakt@jadebeauty.at</a></p>
-</main>
-</body>
-</html>
+  <main>
+    <h1>Kontakt</h1>
+    <form action="#" method="POST" class="kontakt-formular">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br />
 
-</div>
-<footer>
-    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
-</footer>
+      <label for="email">E-Mail:</label><br />
+      <input type="email" id="email" name="email" required /><br />
+
+      <label for="nachricht">Nachricht:</label><br />
+      <textarea id="nachricht" name="nachricht" rows="5" required></textarea><br />
+
+      <button type="submit" class="cta-button">Absenden</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 JadeBeauty | <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+  </footer>
 </body>
 </html>
