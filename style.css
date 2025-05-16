@@ -1,235 +1,176 @@
 :root {
-  --bg: #fff;
-  --text: #111;
-  --accent: #609f85;
+  --jade-green: #609f85;
+  --jade-green-light: #88d9bf;
+  --jade-green-dark: #4a7a6a;
   --gold: #d4af37;
-}
-[data-theme="dark"] {
-  --bg: #121212;
-  --text: #eee;
-  --accent: #88d9bf;
-  --gold: #f0d98b;
+  --gold-light: #f0d98b;
+  --background: #f9f9f6;
+  --text-dark: #222222;
+  --text-light: #ffffff;
 }
 
+/* Grund-Styles */
 body {
+  background-color: var(--background);
+  color: var(--text-dark);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: sans-serif;
+  padding: 0 1rem;
 }
 
-/* HEADER mit Navigation und Button */
-header {
-  position: sticky;
-  top: 0;
-  background: var(--bg);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between; /* Navigation links, Button rechts */
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-  z-index: 1000;
-}
-
-/* NAV Container */
-header nav {
-  display: flex;
-  gap: 1rem;
-  flex-grow: 1; /* Navi kann wachsen */
-  justify-content: center; /* Links zentrieren */
-}
-
-/* NAV Links */
-nav a {
+/* Links & Buttons */
+a, .cta-button {
+  color: var(--jade-green);
   text-decoration: none;
-  color: var(--text);
   font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: color 0.3s ease;
+}
+a:hover, .cta-button:hover {
+  color: var(--gold);
 }
 
-nav a:hover {
-  background-color: var(--accent);
-  color: white;
+/* Header & Footer */
+header, footer {
+  background-color: var(--jade-green-light);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(96,159,133,0.2);
+}
+
+/* Navigation Links */
+nav a {
+  margin: 0 0.75rem;
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+nav a:hover, nav a[aria-current="page"] {
+  background-color: var(--gold);
+  color: var(--jade-green-dark);
+}
+
+/* Überschriften */
+h1, h2, h3 {
+  color: var(--jade-green-dark);
 }
 
 /* Darkmode Button */
-.toggle-btn {
-  background: var(--accent);
-  color: white;
-  padding: 0.5rem 1rem;
+button.toggle-btn {
+  background-color: var(--jade-green);
+  color: var(--text-light);
   border: none;
-  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 1.2rem;
-  transition: background-color 0.3s;
-  flex-shrink: 0; /* Button nicht schrumpfen lassen */
+  transition: background-color 0.3s ease;
 }
-
-.toggle-btn:hover {
+button.toggle-btn:hover {
   background-color: var(--gold);
-  color: var(--text);
+  color: var(--jade-green-dark);
 }
 
-/* MAIN Content zentriert, max Breite */
+/* Hauptbereich */
 main {
   max-width: 1000px;
   margin: auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
-/* PRODUKTE Grid */
+/* Produktboxen */
 .produkte {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
 }
-
 .produkt {
   flex: 1 1 280px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--jade-green-light);
   border-radius: 12px;
   padding: 1rem;
-  background: var(--bg);
+  background: var(--background);
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Preis und Button unten */
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(96,159,133,0.2);
+  transition: box-shadow 0.3s ease;
 }
-
-/* Galerie-Bilder in Produktbox */
-.produkt-bilder {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+.produkt:hover {
+  box-shadow: 0 4px 12px rgba(96,159,133,0.4);
 }
-
-.produkt-bilder img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 8px;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-}
-
-.produkt-bilder img:hover,
-.produkt-bilder img:focus {
-  border-color: var(--accent);
-  outline: none;
-}
-
-.produkt img:not(.produkt-bilder img) {
+.produkt img {
   width: 100%;
   border-radius: 8px;
   object-fit: contain;
-  max-height: 250px; /* Bildgröße besser kontrollieren */
+  max-height: 250px;
 }
 
+/* Labels */
 .label {
   color: var(--gold);
   font-weight: bold;
   margin-bottom: 0.3rem;
 }
 
-.jetzt-neu {
-  color: var(--gold);
-}
-
-.vegan {
-  color: var(--gold);
-}
-
+/* Preis */
 .preis {
   font-size: 1.1rem;
   font-weight: bold;
   margin-top: 0.5rem;
+  color: var(--jade-green-dark);
 }
 
+/* Bewertung */
 .bewertung {
   font-size: 0.9rem;
   color: gray;
   margin-top: 0.3rem;
 }
 
+/* Call-to-Action Buttons */
 .cta-button {
   display: inline-block;
   margin-top: 1rem;
-  background: var(--accent);
-  color: white;
+  background: var(--jade-green);
+  color: var(--text-light);
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-decoration: none;
   text-align: center;
+  transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+  background-color: var(--gold);
+  color: var(--jade-green-dark);
 }
 
-/* INSPIRATIONEN Bereich */
+/* Inspirationsbilder */
 .inspirationen {
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
   justify-content: center;
 }
-
 .inspirationen img {
   width: 100%;
   max-width: 300px;
   border-radius: 12px;
   cursor: pointer;
   object-fit: cover;
+  box-shadow: 0 2px 6px rgba(96,159,133,0.3);
+  transition: transform 0.3s ease;
+}
+.inspirationen img:hover {
+  transform: scale(1.05);
 }
 
-/* Footer */
+/* Footer Text */
 footer {
   margin-top: 3rem;
   text-align: center;
   padding: 1rem;
-  border-top: 1px solid #ccc;
-}
-
-/* NEU: Warum JadeBeauty Boxen */
-.warum-jadebeauty {
-  max-width: 1000px;
-  margin: 0 auto 3rem auto;
-  padding: 0 1rem;
-  text-align: center;
-}
-
-.vorteile-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.vorteil-box {
-  background: var(--bg);
-  border: 1px solid var(--accent);
-  border-radius: 12px;
-  padding: 1.5rem 1rem;
-  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.vorteil-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgb(0 0 0 / 0.15);
-}
-
-.icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: var(--gold);
-}
-
-.vorteil-box h3 {
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  color: var(--accent);
-}
-
-.vorteil-box p {
-  font-size: 0.95rem;
-  color: var(--text);
+  border-top: 1px solid var(--jade-green-light);
+  color: var(--jade-green-dark);
 }
