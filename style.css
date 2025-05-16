@@ -107,11 +107,6 @@ main {
   margin: auto;
 }
 
-@keyframes wiggle {
-  0%, 100% { transform: rotate(-3deg); }
-  50% { transform: rotate(3deg); }
-}
-
 .vorteil {
   background: var(--gold-light);
   border-radius: 12px;
@@ -124,6 +119,13 @@ main {
   color: var(--green-dark);
   font-weight: 600;
   font-size: 1.1rem;
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+
+.vorteil:hover {
+  animation: wiggle 0.5s ease-in-out infinite;
+  cursor: pointer;
 }
 
 .vorteil .icon {
@@ -138,6 +140,11 @@ main {
 .vorteil .icon:hover {
   animation: wiggle 0.5s ease-in-out infinite;
   cursor: pointer;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
 }
 
 .unsere-highlights {
@@ -159,6 +166,13 @@ main {
   justify-content: center;
   max-width: 1100px;
   margin: auto;
+}
+
+.produkt-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3rem;
+  max-width: 280px;
 }
 
 .produkt {
@@ -212,12 +226,28 @@ main {
   margin: 0.3rem 0 0.6rem;
 }
 
-.vegan-label {
-  font-size: 1rem;
-  color: var(--green-dark);
-  font-weight: 700;
-  margin: 0.5rem 0 0 0;
+.label-outer {
+  position: relative;
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
   text-align: center;
+  color: var(--green-dark);
+  background-color: var(--gold-light);
+  user-select: none;
+  max-width: 280px;
+  box-sizing: border-box;
+}
+
+.thermal-label {
+  background-color: #d1e6dc;
+  margin-top: 0.5rem;
+}
+
+.vegan-label {
+  background-color: #c5e1c7;
 }
 
 .cta-button {
@@ -238,28 +268,32 @@ main {
   color: var(--text);
 }
 
-.thermal-funktion {
-  font-size: 0.9rem;
-  font-style: italic;
-  color: var(--green-dark);
-  font-weight: 600;
-  display: block;
-  margin-top: 0.2rem;
-}
-
 .inspirationen {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
-  justify-content: center;
+  padding: 0 1rem;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 .inspirationen img {
-  width: 100%;
-  max-width: 300px;
+  flex: 1 1 18%;
+  max-width: 180px;
+  height: 120px;
+  object-fit: cover;
   border-radius: 12px;
   cursor: pointer;
-  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inspirationen img:hover,
+.inspirationen img:focus {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  outline: none;
 }
 
 footer {
