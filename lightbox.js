@@ -12,12 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
       overlay.style.justifyContent = 'center';
       overlay.style.alignItems = 'center';
       overlay.style.zIndex = '9999';
+
       const fullImg = document.createElement('img');
       fullImg.src = img.src;
       fullImg.style.maxWidth = '90%';
       fullImg.style.maxHeight = '90%';
+
       overlay.appendChild(fullImg);
-      overlay.addEventListener('click', () => overlay.remove());
+
+      overlay.addEventListener('click', () => {
+        overlay.remove();
+      });
+
       document.body.appendChild(overlay);
     });
   });
