@@ -18,56 +18,53 @@ body {
   padding: 0 1rem;
 }
 
-/* Links & Buttons */
-a, .cta-button {
-  color: var(--jade-green);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-a:hover, .cta-button:hover {
-  color: var(--gold);
-}
-
-/* Header & Footer */
-header, footer {
-  background-color: var(--jade-green-light);
-  color: var(--text-light);
+/* Header mit zentrierter Navigation und Button */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--jade-green-light);
   padding: 1rem 2rem;
-  box-shadow: 0 2px 8px rgba(96,159,133,0.2);
+  display: flex;
+  justify-content: center; /* Alles zentriert */
+  align-items: center;
+  gap: 2rem; /* Abstand zwischen nav und button */
+  z-index: 1000;
 }
 
-/* Navigation Links */
+/* Navigation */
+header nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
 nav a {
-  margin: 0 0.75rem;
-  text-decoration: none;
   color: var(--text-light);
-  font-weight: 600;
-  padding: 0.4rem 0.75rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
+  font-weight: 600;
   transition: background-color 0.3s ease;
 }
-nav a:hover, nav a[aria-current="page"] {
+
+nav a:hover,
+nav a[aria-current="page"] {
   background-color: var(--gold);
   color: var(--jade-green-dark);
 }
 
-/* Überschriften */
-h1, h2, h3 {
-  color: var(--jade-green-dark);
-}
-
 /* Darkmode Button */
-button.toggle-btn {
-  background-color: var(--jade-green);
+.toggle-btn {
+  background: var(--jade-green);
   color: var(--text-light);
-  border: none;
   padding: 0.5rem 1rem;
   border-radius: 6px;
+  border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  /* kein margin-left, damit nicht verschoben */
 }
-button.toggle-btn:hover {
+
+.toggle-btn:hover {
   background-color: var(--gold);
   color: var(--jade-green-dark);
 }
@@ -85,6 +82,7 @@ main {
   gap: 2rem;
   flex-wrap: wrap;
 }
+
 .produkt {
   flex: 1 1 280px;
   border: 1px solid var(--jade-green-light);
@@ -97,9 +95,11 @@ main {
   box-shadow: 0 2px 8px rgba(96,159,133,0.2);
   transition: box-shadow 0.3s ease;
 }
+
 .produkt:hover {
   box-shadow: 0 4px 12px rgba(96,159,133,0.4);
 }
+
 .produkt img {
   width: 100%;
   border-radius: 8px;
@@ -129,7 +129,7 @@ main {
   margin-top: 0.3rem;
 }
 
-/* Call-to-Action Buttons */
+/* CTA Buttons */
 .cta-button {
   display: inline-block;
   margin-top: 1rem;
@@ -141,6 +141,7 @@ main {
   text-align: center;
   transition: background-color 0.3s ease;
 }
+
 .cta-button:hover {
   background-color: var(--gold);
   color: var(--jade-green-dark);
@@ -153,6 +154,7 @@ main {
   margin-top: 2rem;
   justify-content: center;
 }
+
 .inspirationen img {
   width: 100%;
   max-width: 300px;
@@ -162,11 +164,12 @@ main {
   box-shadow: 0 2px 6px rgba(96,159,133,0.3);
   transition: transform 0.3s ease;
 }
+
 .inspirationen img:hover {
   transform: scale(1.05);
 }
 
-/* Footer Text */
+/* Footer */
 footer {
   margin-top: 3rem;
   text-align: center;
