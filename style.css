@@ -1,7 +1,7 @@
 :root {
   --jade-green: #609f85;
   --jade-green-light: #88d9bf;
-  --jade-green-dark: #3b5f4c; /* Dunkleres Grün für Hover & aktive Elemente */
+  --jade-green-dark: #3b5f4c;
   --background: #f9f9f6;
   --text-dark: #222222;
   --text-light: #ffffff;
@@ -23,9 +23,9 @@ header {
   background: var(--jade-green-light);
   padding: 1rem 2rem;
   display: flex;
-  justify-content: center; /* Alles zentriert */
+  justify-content: center;
   align-items: center;
-  gap: 2rem; /* Abstand zwischen nav und button */
+  gap: 2rem;
   z-index: 1000;
 }
 
@@ -78,6 +78,7 @@ main {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .produkt {
@@ -91,6 +92,7 @@ main {
   justify-content: space-between;
   box-shadow: 0 2px 8px rgba(96,159,133,0.2);
   transition: box-shadow 0.3s ease;
+  height: 430px; /* Einheitliche Höhe */
 }
 
 .produkt:hover {
@@ -101,29 +103,39 @@ main {
   width: 100%;
   border-radius: 8px;
   object-fit: contain;
-  max-height: 250px;
+  max-height: 180px;
+  margin-bottom: 1rem;
 }
 
-/* Labels */
-.label {
+h3 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
   color: var(--jade-green-dark);
-  font-weight: bold;
-  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-/* Preis */
-.preis {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-top: 0.5rem;
-  color: var(--jade-green-dark);
-}
-
-/* Bewertung */
-.bewertung {
+.thermal-label {
   font-size: 0.9rem;
-  color: gray;
+  color: var(--jade-green);
+  background-color: var(--jade-green-light);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(96,159,133,0.3);
+}
+
+.bewertung {
+  font-size: 1rem;
+  color: #f5a623; /* Goldgelbe Sterne */
   margin-top: 0.3rem;
+}
+
+.bewertungs-text {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  margin-left: 0.5rem;
+  font-weight: 600;
 }
 
 /* Call-to-Action Buttons */
