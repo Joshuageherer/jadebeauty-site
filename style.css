@@ -164,19 +164,32 @@ h3 {
   gap: 0.5rem;
 }
 
-.thermal-label {
-  font-size: 0.9rem;
-  color: var(--jade-green);
+.thermal-outside {
+  max-width: 280px;
+  margin: 0 auto 0.5rem auto;
   background-color: var(--jade-green-light);
-  padding: 0.15rem 0.4rem;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(96,159,133,0.3);
+  color: var(--jade-green-dark);
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(96,159,133,0.3);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.label.vegan {
+  color: var(--jade-green-dark);
+  font-weight: 700;
 }
 
 .bewertung {
   font-size: 0.9rem;
   color: var(--jade-green-dark);
   margin-top: 0.3rem;
+}
+
+.bewertung.dezent {
+  color: var(--jade-green-dark);
 }
 
 .bewertungs-text {
@@ -210,6 +223,7 @@ h3 {
   gap: 1rem;
   margin-top: 2rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .inspirationen img {
