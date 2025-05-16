@@ -1,7 +1,7 @@
 :root {
-  --bg: #e3f0e3; /* leicht grünlicher Hintergrund */
-  --text: #25462d; /* dunkles Jadegrün für Text */
-  --accent: #6fa87f; /* helleres Grün für Akzente */
+  --bg: #e3f0e3;
+  --text: #25462d;
+  --accent: #6fa87f;
   --gold: #d4af37;
 }
 
@@ -73,36 +73,11 @@ main {
   padding: 2rem;
 }
 
-h1, h2 {
+.section-title, h1, h2, h3 {
   text-align: center;
+  color: var(--text);
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: var(--text);
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  max-width: 700px;
-  margin: 0 auto 3rem auto;
-  color: var(--text);
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-ul li {
-  margin: 0.75rem 0;
-}
-
-.label {
-  color: var(--gold);
-  font-weight: bold;
-  margin-top: 0.5rem;
-}
-
-.label.vegan {
-  display: inline-block;
-  margin-top: 0.5rem;
 }
 
 .produkte {
@@ -120,8 +95,12 @@ ul li {
   background: var(--bg);
   text-align: center;
   min-height: 420px;
-  box-shadow: 0 0 6px rgb(0 0 0 / 0.1);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .produkt:hover {
@@ -140,12 +119,24 @@ ul li {
   font-size: 1.1rem;
   font-weight: bold;
   margin-top: 0.5rem;
+  color: var(--text);
 }
 
 .bewertung {
   font-size: 0.9rem;
   color: #3d6c48;
   margin-top: 0.3rem;
+}
+
+.label {
+  color: var(--gold);
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.label.vegan {
+  display: inline-block;
+  margin-top: 0.5rem;
 }
 
 .cta-button {
@@ -162,26 +153,6 @@ ul li {
 .cta-button:hover {
   background-color: var(--gold);
   color: var(--text);
-}
-
-.inspirationen {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.inspirationen img {
-  width: 300px;
-  border-radius: 12px;
-  cursor: pointer;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.inspirationen img:hover {
-  transform: scale(1.05);
 }
 
 footer {
