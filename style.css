@@ -167,7 +167,7 @@ main {
   justify-content: center;
   max-width: 1100px;
   margin: auto;
-  align-items: stretch; /* gleiche Höhe der Wrapper */
+  align-items: stretch;
 }
 
 .produkt-wrapper {
@@ -203,7 +203,7 @@ main {
 }
 
 .produkt {
-  min-height: 420px; /* alle Produktboxen gleiche Höhe */
+  min-height: 420px;
   background: var(--bg);
   border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.05);
@@ -232,6 +232,51 @@ main {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.produkt h3 {
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: 0.5rem;
+}
+
+.produkt p {
+  margin: 0.2rem 0;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.preis {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 0.6rem;
+  color: var(--green-dark);
+}
+
+.bewertung {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0.3rem 0 0.6rem;
+}
+
+.cta-button {
+  margin-top: auto;
+  background-color: var(--accent);
+  color: white;
+  padding: 0.55rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: var(--green-dark);
+  color: var(--text);
+  outline: none;
 }
 
 .inspirationen {
