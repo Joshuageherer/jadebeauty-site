@@ -1,31 +1,52 @@
+:root {
+  --bg: #fff;
+  --text: #111;
+  --accent: #609f85;
+  --gold: #d4af37;
+}
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #eee;
+  --accent: #88d9bf;
+  --gold: #f0d98b;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+}
+
+/* HEADER mit Navigation und Button */
 header {
   position: sticky;
   top: 0;
   background: var(--bg);
   padding: 1rem 2rem;
   display: flex;
-  justify-content: center; /* Zentriert die Navigation */
+  justify-content: space-between; /* Navigation links, Button rechts */
   align-items: center;
   border-bottom: 1px solid #ccc;
-  gap: 20px; /* Abstand zwischen Nav und Button */
   z-index: 1000;
 }
 
-/* Navigation Container */
+/* NAV Container */
 header nav {
   display: flex;
   gap: 1rem;
-  /* WICHTIG: keine margin-left hier, damit nav nicht nach links geschoben wird */
+  flex-grow: 1; /* Navi kann wachsen */
+  justify-content: center; /* Links zentrieren */
 }
 
-/* Nav Links */
+/* NAV Links */
 nav a {
   text-decoration: none;
   color: var(--text);
   font-weight: 600;
   padding: 0.5rem 1rem;
-  transition: background-color 0.3s;
   border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 nav a:hover {
@@ -41,12 +62,105 @@ nav a:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: auto; /* Schiebt den Button ganz rechts hin */
   font-size: 1.2rem;
   transition: background-color 0.3s;
+  flex-shrink: 0; /* Button nicht schrumpfen lassen */
 }
 
 .toggle-btn:hover {
   background-color: var(--gold);
   color: var(--text);
+}
+
+/* MAIN Content zentriert, max Breite */
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* PRODUKTE Grid */
+.produkte {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.produkt {
+  flex: 1 1 280px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Preis und Button unten */
+}
+
+.produkt img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+  max-height: 250px; /* Bildgröße besser kontrollieren */
+}
+
+.label {
+  color: var(--gold);
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.jetzt-neu {
+  color: var(--gold);
+}
+
+.vegan {
+  color: var(--gold);
+}
+
+.preis {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.bewertung {
+  font-size: 0.9rem;
+  color: gray;
+  margin-top: 0.3rem;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* INSPIRATIONEN Bereich */
+.inspirationen {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.inspirationen img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
 }
