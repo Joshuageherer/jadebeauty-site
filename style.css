@@ -1,9 +1,7 @@
 :root {
   --jade-green: #609f85;
   --jade-green-light: #88d9bf;
-  --jade-green-dark: #4a7a6a;
-  --gold: #d4af37;
-  --gold-light: #f0d98b;
+  --jade-green-dark: #3b5f4c; /* Dunkleres Grün für Hover & aktive Elemente */
   --background: #f9f9f6;
   --text-dark: #222222;
   --text-light: #ffffff;
@@ -48,8 +46,8 @@ nav a {
 
 nav a:hover,
 nav a[aria-current="page"] {
-  background-color: var(--gold);
-  color: var(--jade-green-dark);
+  background-color: var(--jade-green-dark);
+  color: var(--text-light);
 }
 
 /* Darkmode Button */
@@ -61,12 +59,11 @@ nav a[aria-current="page"] {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  /* kein margin-left, damit nicht verschoben */
 }
 
 .toggle-btn:hover {
-  background-color: var(--gold);
-  color: var(--jade-green-dark);
+  background-color: var(--jade-green-dark);
+  color: var(--text-light);
 }
 
 /* Hauptbereich */
@@ -109,7 +106,7 @@ main {
 
 /* Labels */
 .label {
-  color: var(--gold);
+  color: var(--jade-green-dark);
   font-weight: bold;
   margin-bottom: 0.3rem;
 }
@@ -129,7 +126,7 @@ main {
   margin-top: 0.3rem;
 }
 
-/* CTA Buttons */
+/* Call-to-Action Buttons */
 .cta-button {
   display: inline-block;
   margin-top: 1rem;
@@ -143,8 +140,8 @@ main {
 }
 
 .cta-button:hover {
-  background-color: var(--gold);
-  color: var(--jade-green-dark);
+  background-color: var(--jade-green-dark);
+  color: var(--text-light);
 }
 
 /* Inspirationsbilder */
