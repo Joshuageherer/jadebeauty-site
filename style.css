@@ -1,6 +1,6 @@
 :root {
-  --bg: #e6f0e9; /* leicht grünliches helles Background */
-  --text: #2f4f4f;
+  --bg: #e6f0e9; /* helles, leicht grünliches Hintergrund */
+  --text: #2f4f4f; /* dunkleres grün-grau für Text */
   --accent: #609f85; /* jade-grün */
   --gold: #d4af37;
   --hover-shadow: rgba(0, 0, 0, 0.15);
@@ -50,7 +50,8 @@ nav a {
   transition: background-color 0.3s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a[aria-current="page"] {
   background-color: var(--accent);
   color: white;
 }
@@ -121,7 +122,7 @@ main {
   cursor: pointer;
 }
 
-/* PRODUKTE Grid */
+/* PRODUKTE Grid Startseite 2x2 */
 .produkte.zwei-zeilen {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -227,16 +228,15 @@ main {
   background-color: #4a6a4a;
 }
 
-/* Inspirationen */
+/* Inspirationen - 6 Bilder in einer Reihe, groß und zentriert */
 .inspirationen {
   display: flex;
   gap: 1rem;
   justify-content: center;
   margin-top: 3rem;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 1rem;
 }
 
 .inspirationen img {
@@ -245,10 +245,40 @@ main {
   cursor: pointer;
   object-fit: cover;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .inspirationen img:hover {
   transform: scale(1.1);
+}
+
+/* Shop-spezifisches Grid */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto 0 auto;
+}
+
+.shop-grid .produkt {
+  height: auto;
+  max-height: none;
+  padding: 1.5rem;
+  background: white;
+  box-shadow: 0 0 10px var(--hover-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop-grid .produkt:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px var(--hover-shadow);
+}
+
+.shop-grid .produkt img {
+  max-height: 220px;
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
 
 /* Footer */
@@ -258,3 +288,46 @@ footer {
   padding: 1rem;
   border-top: 1px solid #ccc;
 }
+
+/* Scrollbar für Inspirationen (horizontal) */
+.inspirationen::-webkit-scrollbar {
+  height: 8px;
+}
+
+.inspirationen::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.inspirationen::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 4px;
+}
+
+/* Cursor und Hover Effekte für Vorteile */
+.warum-jadebeauty .vorteile-box ul li {
+  cursor: pointer;
+}
+
+.warum-jadebeauty .vorteile-box ul li:hover {
+  animation: wiggle 0.3s ease-in-out 1;
+}
+
+/* Animation Wiggle nur einmal beim Hover */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  50% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+/* Verhindere Cursor: text bei Links */
+nav a, .cta-button {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Button Anpassung für Darkmode */
+.cta-button:hover {
+  background-color: #4a6a4a;
+}
+
