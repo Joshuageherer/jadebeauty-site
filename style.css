@@ -25,10 +25,10 @@ header {
   background: var(--bg);
   padding: 1rem 2rem;
   display: flex;
-  justify-content: center; /* Nav zentrieren */
+  justify-content: center;
   align-items: center;
   border-bottom: 1px solid #ccc;
-  gap: 20px; /* Abstand zwischen Nav und Button */
+  gap: 20px;
   z-index: 1000;
 }
 
@@ -167,4 +167,18 @@ footer {
   text-align: center;
   padding: 1rem;
   border-top: 1px solid #ccc;
+}
+
+/* Responsive (Grundlage) */
+@media (max-width: 600px) {
+  .produkte {
+    flex-direction: column;
+  }
+  header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  nav {
+    margin-bottom: 0.5rem;
+  }
 }
