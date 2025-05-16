@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.lightbox').forEach(img => {
     img.addEventListener('click', () => {
