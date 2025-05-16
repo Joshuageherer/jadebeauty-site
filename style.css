@@ -1,10 +1,10 @@
 :root {
-  --bg: #e6f0e9;
-  --text: #2d4a34;
+  --bg: #e3f0e7;
+  --text: #2a4d34;
   --accent: #609f85;
   --gold: #d4af37;
-  --label-bg: #a2c4a4;
-  --label-text: #204320;
+  --green-light: #b6d7b9;
+  --green-dark: #2a4d34;
 }
 
 [data-theme="dark"] {
@@ -12,8 +12,8 @@
   --text: #eee;
   --accent: #88d9bf;
   --gold: #f0d98b;
-  --label-bg: #355a3c;
-  --label-text: #a9d9a0;
+  --green-light: #346f48;
+  --green-dark: #b6d7b9;
 }
 
 body {
@@ -23,23 +23,21 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* HEADER */
 header {
   position: sticky;
   top: 0;
   background: var(--bg);
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-bottom: 1px solid #ccc;
   z-index: 1000;
 }
 
-nav {
+header nav {
   display: flex;
-  gap: 1.5rem;
-  align-items: center;
+  gap: 2rem;
 }
 
 nav a {
@@ -51,19 +49,9 @@ nav a {
   transition: background-color 0.3s;
 }
 
-nav a:hover,
-nav a.active {
+nav a:hover {
   background-color: var(--accent);
   color: white;
-}
-
-.logo-link {
-  margin-right: 2rem;
-}
-
-.logo {
-  height: 40px;
-  width: auto;
 }
 
 .toggle-btn {
@@ -73,9 +61,9 @@ nav a.active {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 1rem;
   font-size: 1.2rem;
   transition: background-color 0.3s;
-  flex-shrink: 0;
 }
 
 .toggle-btn:hover {
@@ -83,7 +71,6 @@ nav a.active {
   color: var(--text);
 }
 
-/* MAIN */
 main {
   max-width: 1000px;
   margin: auto;
@@ -91,38 +78,33 @@ main {
   text-align: center;
 }
 
-/* Warum JadeBeauty? */
-.warum-jadebeauty-list {
+.warum-jadebeauty ul {
   list-style: none;
   padding: 0;
-  margin: 0 auto 3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.warum-jadebeauty-list li {
-  background-color: var(--label-bg);
-  color: var(--label-text);
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: default;
+.warum-jadebeauty ul li {
+  background: var(--green-light);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  flex: 1 1 280px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  justify-content: center;
-  transition: transform 0.15s ease-in-out;
+  font-weight: 600;
+  transition: transform 0.3s ease;
 }
 
-.warum-jadebeauty-list li:hover {
-  transform: scale(1.05);
-  cursor: pointer;
+.warum-jadebeauty ul li:hover {
+  transform: translateY(-3px);
 }
 
-/* Unsere Highlights */
 .produkte {
   display: flex;
   gap: 2rem;
@@ -131,95 +113,159 @@ main {
 }
 
 .produkt {
-  flex: 1 1 280px;
-  max-width: 280px;
   background: white;
+  flex: 1 1 280px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgb(0 0 0 / 0.05);
-  padding: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-start;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
 }
 
 .produkt:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 .produkt img {
   width: 100%;
-  height: 180px;
+  max-height: 250px;
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: 8px;
   margin-bottom: 1rem;
 }
 
-.produkt h3 {
-  margin: 0.5rem 0 0.25rem;
-  font-weight: 700;
-  color: var(--text);
+.label {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 15px;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  font-size: 0.85rem;
+  background-color: var(--green-light);
+  color: var(--green-dark);
 }
 
-.produkt p {
-  margin: 0 0 0.5rem;
-  color: var(--text);
+.jetzt-neu {
+  background-color: #a4d7aa;
+  color: #2e513a;
+}
+
+.vegan {
+  background-color: #a1c995;
+  color: #2a4a33;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.vegan::before {
+  content: "🌱";
 }
 
 .preis {
-  font-weight: 700;
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0 0.7rem;
+  color: var(--green-dark);
 }
 
 .bewertung {
   font-size: 0.9rem;
-  color: var(--accent);
+  color: #4d674e;
   margin-bottom: 1rem;
-  user-select: none;
+  letter-spacing: 0.1rem;
 }
 
-.label {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background-color: var(--label-bg);
-  color: var(--label-text);
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
   font-weight: 600;
-  padding: 0.2rem 0.5rem;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  user-select: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(96, 159, 133, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-/* Inspiration */
+.cta-button:hover {
+  background-color: #4b7b69;
+  box-shadow: 0 6px 12px rgba(75, 123, 105, 0.6);
+  color: white;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #eee;
+  --accent: #88d9bf;
+  --gold: #f0d98b;
+  --green-light: #346f48;
+  --green-dark: #b6d7b9;
+}
+
+[data-theme="dark"] body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] header {
+  background: var(--bg);
+  border-bottom: 1px solid #444;
+}
+
+[data-theme="dark"] nav a {
+  color: var(--text);
+}
+
+[data-theme="dark"] nav a:hover {
+  background-color: var(--accent);
+  color: #121212;
+}
+
+[data-theme="dark"] .toggle-btn {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+[data-theme="dark"] .toggle-btn:hover {
+  background-color: var(--gold);
+  color: var(--text);
+}
+
+[data-theme="dark"] .produkt {
+  background: #1c2a1d;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+[data-theme="dark"] .label {
+  background-color: var(--green-dark);
+  color: var(--green-light);
+}
+
+[data-theme="dark"] .bewertung {
+  color: #a3c3a2;
+}
+
 .inspirationen {
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
   gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
 }
 
 .inspirationen img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
   border-radius: 12px;
   cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.inspirationen img:hover {
-  transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-  margin-top: 3rem;
-  text-align: center;
-  padding: 1rem;
-  border-top: 1px solid #ccc;
+  max-height: 200px;
+  flex: 0 0 auto;
+  object-fit: cover;
 }
