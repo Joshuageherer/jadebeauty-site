@@ -1,8 +1,10 @@
 :root {
-  --bg: #e5f0e8;
-  --text: #1f3d27;
+  --bg: #e6f0e9;
+  --text: #2d4a34;
   --accent: #609f85;
-  --gold: #4d7c4f;
+  --gold: #d4af37;
+  --label-bg: #a2c4a4;
+  --label-text: #204320;
 }
 
 [data-theme="dark"] {
@@ -10,6 +12,8 @@
   --text: #eee;
   --accent: #88d9bf;
   --gold: #f0d98b;
+  --label-bg: #355a3c;
+  --label-text: #a9d9a0;
 }
 
 body {
@@ -19,43 +23,25 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* HEADER mit Navigation und Button */
+/* HEADER */
 header {
   position: sticky;
   top: 0;
   background: var(--bg);
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between; /* Navigation links, Button rechts */
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ccc;
   z-index: 1000;
 }
 
-/* NAV Container */
-header nav {
+nav {
   display: flex;
-  gap: 1rem;
-  flex-grow: 1;
-  justify-content: center;
+  gap: 1.5rem;
   align-items: center;
 }
 
-/* Logo */
-.logo {
-  height: 40px;
-  vertical-align: middle;
-  margin-right: 1rem;
-}
-
-/* Logo Link */
-.logo-link {
-  display: flex;
-  align-items: center;
-  margin-right: 1rem;
-}
-
-/* NAV Links */
 nav a {
   text-decoration: none;
   color: var(--text);
@@ -65,12 +51,21 @@ nav a {
   transition: background-color 0.3s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
   background-color: var(--accent);
   color: white;
 }
 
-/* Darkmode Button */
+.logo-link {
+  margin-right: 2rem;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
 .toggle-btn {
   background: var(--accent);
   color: white;
@@ -88,50 +83,43 @@ nav a:hover {
   color: var(--text);
 }
 
-/* MAIN Content */
+/* MAIN */
 main {
   max-width: 1000px;
   margin: auto;
   padding: 2rem;
-}
-
-/* Warum JadeBeauty */
-.warum-jadebeauty {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-
-.vorteile-box {
-  background-color: var(--accent);
-  color: white;
-  border-radius: 12px;
-  padding: 1.5rem 2rem;
-  flex: 1 1 300px;
-  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-  font-weight: 600;
-  line-height: 1.5;
   text-align: center;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
 }
 
-.vorteile-box ul {
+/* Warum JadeBeauty? */
+.warum-jadebeauty-list {
   list-style: none;
   padding: 0;
-  margin: 0;
-  width: 100%;
+  margin: 0 auto 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem 2rem;
 }
 
-.vorteile-box li {
-  margin: 0.6rem 0;
+.warum-jadebeauty-list li {
+  background-color: var(--label-bg);
+  color: var(--label-text);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  font-weight: 600;
+  font-size: 0.95rem;
   cursor: default;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.75rem;
+  justify-content: center;
+  transition: transform 0.15s ease-in-out;
+}
+
+.warum-jadebeauty-list li:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 /* Unsere Highlights */
@@ -140,106 +128,92 @@ main {
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 3rem;
 }
 
 .produkt {
   flex: 1 1 280px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 1rem;
+  max-width: 280px;
   background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.05);
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  box-shadow: 0 4px 8px rgb(0 0 0 / 0.05);
+  align-items: center;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .produkt:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 20px rgb(0 0 0 / 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
 }
 
 .produkt img {
   width: 100%;
-  border-radius: 8px;
+  height: 180px;
   object-fit: contain;
-  max-height: 230px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
 }
 
 .produkt h3 {
-  margin: 1rem 0 0.3rem 0;
+  margin: 0.5rem 0 0.25rem;
+  font-weight: 700;
   color: var(--text);
 }
 
 .produkt p {
-  margin: 0.3rem 0;
+  margin: 0 0 0.5rem;
   color: var(--text);
 }
 
 .preis {
+  font-weight: 700;
   font-size: 1.1rem;
-  font-weight: bold;
-  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .bewertung {
-  font-size: 0.85rem;
-  color: #6b705c;
-  margin-top: 0.3rem;
-}
-
-.cta-button {
-  margin-top: 1rem;
-  background: var(--accent);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-  text-align: center;
-  align-self: flex-start;
-  cursor: pointer;
-}
-
-/* Labels Thermo & Vegan */
-.label {
-  display: inline-block;
-  background-color: #a2c4a6;
-  color: #2d5d34;
-  padding: 0.2rem 0.6rem;
-  border-radius: 8px;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
   font-size: 0.9rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  user-select: none;
 }
 
-.label.thermo {
-  background-color: #b1d4bb;
-  color: #2a563b;
+.label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--label-bg);
+  color: var(--label-text);
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  user-select: none;
 }
 
-.label.vegan {
-  background-color: #9dc0a8;
-  color: #26402f;
-}
-
-/* Inspirationen */
+/* Inspiration */
 .inspirationen {
-  display: flex;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
-  justify-content: center;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  padding-bottom: 1rem;
 }
 
 .inspirationen img {
-  width: 300px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
   border-radius: 12px;
   cursor: pointer;
-  object-fit: cover;
-  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.inspirationen img:hover {
+  transform: scale(1.05);
 }
 
 /* Footer */
