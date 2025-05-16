@@ -1,8 +1,8 @@
 
 :root {
-  --bg: #e7f2eb;
-  --text: #1f3524;
-  --accent: #6fa87f;
+  --bg: #edf6f2;
+  --text: #1c3526;
+  --accent: #609f85;
   --gold: #d4af37;
   --box: #ffffff;
 }
@@ -21,15 +21,16 @@ body {
 }
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: var(--bg);
+  background: var(--box);
   border-bottom: 1px solid #ccc;
 }
 nav {
   display: flex;
   gap: 2rem;
+  margin: 0 auto;
 }
 nav a {
   text-decoration: none;
@@ -37,7 +38,6 @@ nav a {
   font-weight: bold;
 }
 .toggle-btn {
-  margin-left: auto;
   background: var(--accent);
   color: white;
   border: none;
@@ -49,6 +49,9 @@ main {
   max-width: 1000px;
   margin: auto;
   padding: 2rem;
+}
+h1, h2 {
+  text-align: center;
 }
 .vorteile-grid {
   display: grid;
@@ -70,6 +73,12 @@ main {
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   margin-bottom: 0.5rem;
+}
+.thermo {
+  background: #ff7043;
+}
+.vegan {
+  background: #4caf50;
 }
 .produkte {
   display: flex;
