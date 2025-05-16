@@ -2,17 +2,17 @@
   --bg: #fff;
   --text: #111;
   --accent: #609f85;
-  --gold: #3d5a3c;
+  --green-dark: #2a5d3b;
+  --gold: #d4af37;
   --gold-light: #a5c3a1;
-  --green-dark: #2c4d33;
 }
 [data-theme="dark"] {
   --bg: #121212;
   --text: #eee;
   --accent: #88d9bf;
-  --gold: #7ab38e;
+  --green-dark: #73a37a;
+  --gold: #f0d98b;
   --gold-light: #a5c3a1;
-  --green-dark: #a0bfa0;
 }
 
 html, body {
@@ -24,7 +24,6 @@ html, body {
   color: var(--text);
 }
 
-/* HEADER mit Navigation und Button */
 header {
   width: 100%;
   position: sticky;
@@ -39,7 +38,6 @@ header {
   box-sizing: border-box;
 }
 
-/* NAV Container */
 header nav {
   display: flex;
   gap: 1rem;
@@ -47,7 +45,6 @@ header nav {
   justify-content: center;
 }
 
-/* NAV Links */
 nav a {
   text-decoration: none;
   color: var(--text);
@@ -64,7 +61,6 @@ nav a:focus {
   outline: none;
 }
 
-/* Darkmode Button */
 .toggle-btn {
   background: var(--accent);
   color: white;
@@ -79,119 +75,165 @@ nav a:focus {
 
 .toggle-btn:hover,
 .toggle-btn:focus {
-  background-color: var(--gold);
+  background-color: var(--green-dark);
   color: var(--text);
   outline: none;
 }
 
-/* MAIN Content zentriert, max Breite */
 main {
   max-width: 1000px;
   margin: auto;
   padding: 2rem;
 }
 
-/* PRODUKTE Grid */
+.warum-jadebeauty {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.warum-jadebeauty h1 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+.vorteile-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem 3rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.vorteil {
+  background: var(--gold-light);
+  border-radius: 12px;
+  padding: 1.3rem 1.8rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  flex: 1 1 280px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--green-dark);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.vorteil .icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.unsere-highlights {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.unsere-highlights h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
 .produkte {
   display: flex;
-  gap: 2rem;
   flex-wrap: wrap;
+  gap: 2rem;
   justify-content: center;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .produkt {
   flex: 1 1 280px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 1rem;
   background: var(--bg);
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  padding: 1rem 1.2rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
   max-width: 280px;
+}
+
+.produkt:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .produkt img {
   width: 100%;
-  border-radius: 8px;
+  max-height: 240px;
   object-fit: contain;
-  max-height: 250px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
-.label {
+.produkt h3 {
+  font-weight: 700;
   color: var(--green-dark);
-  font-weight: bold;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
-.jetzt-neu {
-  color: var(--green-dark);
-}
-
-.vegan {
-  color: var(--green-dark);
+.produkt p {
+  margin: 0.2rem 0;
+  color: var(--text);
+  font-weight: 500;
 }
 
 .preis {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 0.6rem;
+  color: var(--green-dark);
 }
 
 .bewertung {
-  font-size: 0.9rem;
-  color: #607060; /* dezenteres Grün */
-  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0.3rem 0 0.6rem;
 }
 
-/* Sterne etwas dezenter */
-.bewertung::before {
-  content: "★★★★★";
-  letter-spacing: 2px;
+.vegan-label {
   font-size: 1rem;
-  color: #a0bfa0; /* helle Sterne */
-  position: absolute;
-  margin-left: -1.8rem;
-  margin-top: 0.2rem;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-.bewertung::after {
-  content: "★★★★☆";
-  letter-spacing: 2px;
-  font-size: 1rem;
-  color: var(--green-dark); /* gefüllte Sterne */
-  position: absolute;
-  margin-left: -1.8rem;
-  margin-top: 0.2rem;
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Button */
-.cta-button {
-  display: inline-block;
-  margin-top: 1rem;
-  background: var(--accent);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  text-decoration: none;
+  color: var(--green-dark);
+  font-weight: 700;
+  margin: 0.5rem 0 0 0;
   text-align: center;
-  transition: background-color 0.3s;
 }
 
-.cta-button:hover,
-.cta-button:focus {
-  background-color: var(--green-dark);
+.cta-button {
+  margin-top: auto;
+  background-color: var(--accent);
   color: white;
-  outline: none;
+  padding: 0.55rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
 }
 
-/* INSPIRATIONEN Bereich */
+.cta-button:hover {
+  background-color: var(--green-dark);
+  color: var(--text);
+}
+
+.thermal-funktion {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--green-dark);
+  font-weight: 600;
+  display: block;
+  margin-top: 0.2rem;
+}
+
 .inspirationen {
   display: flex;
   gap: 1rem;
@@ -207,7 +249,6 @@ main {
   object-fit: cover;
 }
 
-/* Footer */
 footer {
   margin-top: 3rem;
   text-align: center;
