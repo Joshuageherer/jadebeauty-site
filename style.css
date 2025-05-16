@@ -97,7 +97,30 @@ main {
   justify-content: space-between; /* Preis und Button unten */
 }
 
-.produkt img {
+/* Galerie-Bilder in Produktbox */
+.produkt-bilder {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.produkt-bilder img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.produkt-bilder img:hover,
+.produkt-bilder img:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.produkt img:not(.produkt-bilder img) {
   width: 100%;
   border-radius: 8px;
   object-fit: contain;
