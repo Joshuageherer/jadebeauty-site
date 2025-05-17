@@ -1,1 +1,207 @@
-/* Insert your complete CSS here */
+:root {
+  --bg: #edf6f2;
+  --text: #1c3526;
+  --accent: #609f85;
+  --gold: #d4af37;
+  --box: #ffffff;
+}
+[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --text: #e3f2e1;
+  --accent: #88d9bf;
+  --gold: #f0d98b;
+  --box: #2c2c2c;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--box);
+  border-bottom: 1px solid #ccc;
+}
+nav {
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto;
+}
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+}
+.toggle-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+h1, h2 {
+  text-align: center;
+}
+.warum-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.warum-box {
+  background: #e6f2ec; /* hellgrün im Lightmode */
+  background: var(--box);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.warum-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+.produkte {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.produkt {
+  flex: 0 1 300px;
+  background: var(--box);
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+}
+.produkt img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.label {
+  display: inline-block;
+  font-weight: bold;
+  background: var(--accent);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 0.7rem;
+  font-size: 0.9rem;
+}
+.label.thermo {
+  background-color: #ff7043;
+}
+.label.vegan {
+  background-color: #4caf50;
+}
+.bewertung {
+  font-size: 0.9rem;
+  color: #666;
+}
+.preis {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+.cta-button {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  margin-top: 0.8rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.cta-button:hover {
+  background: var(--gold);
+  color: var(--text);
+}
+
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+  justify-items: center;
+}
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 1rem;
+  justify-content: flex-start;
+}
+
+  width: 100%;
+  max-width: 320px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+  height: 250px;
+  width: 250px;
+  flex: 0 0 auto;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.inspiration-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.inspiration-section {
+  margin-top: 4rem;
+}
+.inspiration-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.inspiration-fixed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-content: start;
+}
+.inspiration-fixed-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
