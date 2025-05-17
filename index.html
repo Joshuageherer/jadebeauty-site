@@ -2,100 +2,125 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Farbwechsel Tasse – JadeBeauty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farbwechsel Tasse – Produktdetail | JadeBeauty</title>
   <link rel="stylesheet" href="style.css">
-  <script defer>
-    function switchImage(imgSrc) {
-      document.getElementById('main-image').src = imgSrc;
-    }
-
-    function toggleAccordion(id) {
-      const panel = document.getElementById(id);
-      panel.classList.toggle('open');
-    }
-  </script>
-  <style>
-    .product-page {
-      max-width: 1100px;
-      margin: auto;
-      padding: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-    .product-images, .product-details {
-      flex: 1 1 500px;
-    }
-    .thumbnails {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-    .thumbnails img {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      cursor: pointer;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    .accordion {
-      margin-top: 2rem;
-    }
-    .accordion-section {
-      border-top: 1px solid #ccc;
-      padding: 1rem 0;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .accordion-panel {
-      display: none;
-      padding: 0.5rem 0;
-    }
-    .accordion-panel.open {
-      display: block;
-    }
-  </style>
 </head>
 <body>
-  <main class="product-page">
-    <section class="product-images">
-      <img id="main-image" src="assets/img/color-change-mug-handle-right.jpg" alt="Farbwechsel Tasse" style="width: 100%; max-width: 500px; border-radius: 12px;">
-      <div class="thumbnails">
-        <img src="assets/img/color-change-mug-handle-right.jpg" onclick="switchImage(this.src)" alt="Tasse rechts">
-        <img src="assets/img/color-change-mug-front.png" onclick="switchImage(this.src)" alt="Tasse vorne">
-        <img src="assets/img/color-change-mug-back.png" onclick="switchImage(this.src)" alt="Tasse hinten">
-        <img src="assets/img/color-change-mug-handle-left.png" onclick="switchImage(this.src)" alt="Tasse links">
-        <img src="assets/img/color-change-function.png" onclick="switchImage(this.src)" alt="Farbwechsel Funktion">
+  <header>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="shop.html">Shop</a>
+      <a href="anleitung.html">Anleitung</a>
+      <a href="blog.html">Blog</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <button id="dark-toggle">🌙</button>
+  </header>
+
+  <main class="product-detail">
+    <section class="product-container">
+      <div class="image-gallery">
+        <img id="main-img" src="assets/img/color-change-mug-handle-right.jpg" alt="Farbwechsel Tasse">
+        <div class="thumbnail-row">
+          <img src="assets/img/color-change-mug-handle-right.jpg" class="thumb" alt="Ansicht 1">
+          <img src="assets/img/color-change-mug-handle-left.png" class="thumb" alt="Ansicht 2">
+          <img src="assets/img/color-change-mug-front.png" class="thumb" alt="Frontansicht">
+          <img src="assets/img/color-change-mug-back.png" class="thumb" alt="Rückseite">
+          <img src="assets/img/color-change-function.png" class="thumb" alt="Farbwechsel Funktion">
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h1>Farbwechsel Tasse – Glow From Within</h1>
+        <p class="subtitle">Beginne deinen Tag mit Stil ✨</p>
+        <div class="rating">★★★★★ <span>(58 Bewertungen)</span></div>
+        <p class="price">€16,95</p>
+        <p class="verfuegbar">Sofort lieferbar – Versand in 1–3 Tagen</p>
+        <button class="buy-button">In den Warenkorb</button>
+
+        <div class="icons">
+          <div class="icon-item">🌡️ Farbwechsel-Effekt</div>
+          <div class="icon-item">🧼 Spülmaschinenfest</div>
+          <div class="icon-item">🌱 Nachhaltig produziert</div>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-toggle">Anwendung</button>
+            <div class="accordion-content">
+              <p>Einfach heißes Getränk einfüllen und das Design verwandelt sich sichtbar.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-toggle">Warum es wirkt</button>
+            <div class="accordion-content">
+              <p>Motivierende Botschaft + Design-Verwandlung für einen besseren Start in den Tag.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-toggle">Hauptmaterialien</button>
+            <div class="accordion-content">
+              <p>Keramik mit Thermobeschichtung. BPA-frei.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="product-details">
-      <span class="label" style="background: var(--accent); color: white; padding: 0.3rem 0.6rem; border-radius: 5px; font-size: 0.9rem;">Thermo-Funktion</span>
-      <h1>Farbwechsel Tasse</h1>
-      <p>Beginne deinen Tag mit Stil – mit einer magischen Farbwechselfunktion.</p>
-      <p><strong>€16,95</strong></p>
-      <p style="color: gray;">★★★★★ (58 Bewertungen)</p>
-      <a href="shop.html" class="cta-button">In den Warenkorb</a>
-
-      <div class="accordion">
-        <div class="accordion-section" onclick="toggleAccordion('panel1')">Anwendung</div>
-        <div class="accordion-panel" id="panel1">
-          Einfach mit heißem Wasser befüllen – die Tasse wechselt sanft ihre Farbe und zeigt das JadeBeauty Design.
+    <section class="recommendations">
+      <h2>Wird oft mitbestellt</h2>
+      <div class="scroll-row">
+        <div class="product-mini">
+          <img src="assets/img/cosmetic-bag.jpg" alt="Kosmetiktasche">
+          <p>Kosmetiktasche</p>
+          <span>€18,95</span>
         </div>
-
-        <div class="accordion-section" onclick="toggleAccordion('panel2')">Warum es wirkt</div>
-        <div class="accordion-panel" id="panel2">
-          Der psychologische Effekt des Farbwechsels macht deine Morgenroutine bewusster und achtsamer.
+        <div class="product-mini">
+          <img src="assets/img/white-sage-candle-closed.jpg" alt="Duftkerze">
+          <p>White Sage Duftkerze</p>
+          <span>€17,95</span>
         </div>
-
-        <div class="accordion-section" onclick="toggleAccordion('panel3')">Hauptmerkmale</div>
-        <div class="accordion-panel" id="panel3">
-          Thermoreaktive Beschichtung, mattes Finish, für Spülmaschine geeignet, 330ml Volumen.
+        <div class="product-mini">
+          <img src="assets/img/logo-mug.jpg" alt="Selfcare Tasse">
+          <p>Selfcare Tasse</p>
+          <span>€16,00</span>
         </div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <h2>Was unsere Kunden sagen</h2>
+      <div class="review">
+        <strong>Alexandra M.</strong>
+        <p>Ich nutze die Tasse jeden Morgen. Die Farbänderung macht einfach gute Laune!</p>
+      </div>
+      <div class="review">
+        <strong>Me-Time</strong>
+        <p>Ein echtes Highlight in meiner Selfcare-Routine – ideal als Geschenk.</p>
       </div>
     </section>
   </main>
+
+  <footer>
+    <p>&copy; 2025 JadeBeauty | <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+  </footer>
+
+  <script src="darkmode.js"></script>
+  <script>
+    document.querySelectorAll('.thumb').forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        document.getElementById('main-img').src = thumb.src;
+      });
+    });
+
+    document.querySelectorAll('.accordion-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.toggle('active');
+        const content = button.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
 </body>
 </html>
