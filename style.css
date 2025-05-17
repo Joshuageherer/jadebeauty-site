@@ -46,51 +46,35 @@ nav a {
   cursor: pointer;
 }
 main {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   padding: 2rem;
 }
 h1, h2 {
   text-align: center;
 }
-.vorteile-grid {
+.warum-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
-.vorteil-box {
+.warum-box {
   background: var(--box);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
   border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.label {
-  font-weight: bold;
-  display: inline-block;
-  background: var(--accent);
-  color: white;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  margin-bottom: 0.5rem;
-}
-.thermo {
-  background: #ff7043;
-}
-.vegan {
-  background: #4caf50;
+.warum-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 .produkte {
   display: flex;
-  gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-}
-.shop-grid {
-  display: flex;
   gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 .produkt {
   flex: 0 1 300px;
@@ -106,26 +90,48 @@ h1, h2 {
   object-fit: contain;
   border-radius: 8px;
 }
-.preis {
-  font-size: 1.1rem;
+.label {
+  display: inline-block;
   font-weight: bold;
+  background: var(--accent);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 0.7rem;
+  font-size: 0.9rem;
+}
+.label.thermo {
+  background-color: #ff7043;
+}
+.label.vegan {
+  background-color: #4caf50;
 }
 .bewertung {
   font-size: 0.9rem;
-  color: gray;
+  color: #666;
+}
+.preis {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
 }
 .cta-button {
-  margin-top: 0.5rem;
   display: inline-block;
   background: var(--accent);
   color: white;
-  padding: 0.5rem 1.2rem;
-  border-radius: 5px;
   text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  margin-top: 0.8rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.cta-button:hover {
+  background: var(--gold);
+  color: var(--text);
 }
 .inspiration-section {
   margin-top: 3rem;
-  text-align: center;
 }
 .inspiration-gallery {
   display: flex;
@@ -147,9 +153,6 @@ h1, h2 {
 .inspiration-img:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-[data-theme="dark"] .inspiration-img {
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
 }
 footer {
   margin-top: 3rem;
