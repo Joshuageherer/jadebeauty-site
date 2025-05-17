@@ -136,6 +136,12 @@ h1, h2 {
 }
 .inspiration-gallery {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+  justify-items: center;
+}
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   padding: 1rem 0;
@@ -148,6 +154,14 @@ h1, h2 {
   justify-content: flex-start;
 }
 .inspiration-img {
+  width: 100%;
+  max-width: 320px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
   width: 100%;
   height: 250px;
   object-fit: cover;
