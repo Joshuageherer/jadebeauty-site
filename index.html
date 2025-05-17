@@ -3,76 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Farbwechsel-Tasse von JadeBeauty – entdecke stilvolles Selfcare-Design mit Thermoeffekt." />
   <title>Farbwechsel Tasse | JadeBeauty</title>
+  <meta name="description" content="Entdecke die magische Farbwechsel Tasse von JadeBeauty – mit Logo, Thermo-Funktion und stilvollem Design." />
   <link rel="stylesheet" href="style.css" />
-  <script src="darkmode.js" defer></script>
   <script src="lightbox.js" defer></script>
-  <style>
-    .product-page {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-    .product-images {
-      flex: 1 1 45%;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .product-images img {
-      width: 100%;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    .product-info {
-      flex: 1 1 45%;
-    }
-    .product-info h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-    .product-info p {
-      margin: 0.5rem 0;
-    }
-    .price {
-      font-size: 1.4rem;
-      font-weight: bold;
-      margin: 1rem 0 0.5rem;
-    }
-    .buy-button {
-      background: var(--accent);
-      color: white;
-      padding: 0.7rem 1.2rem;
-      font-size: 1rem;
-      text-decoration: none;
-      border-radius: 8px;
-      display: inline-block;
-      margin-top: 0.5rem;
-    }
-    .buy-button:hover {
-      background: var(--gold);
-      color: var(--text);
-    }
-    .product-section {
-      margin-top: 2rem;
-    }
-    .product-section h2 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-    }
-    .product-section p {
-      line-height: 1.6;
-    }
-    @media (max-width: 768px) {
-      .product-page {
-        flex-direction: column;
-      }
-    }
-  </style>
+  <script src="darkmode.js" defer></script>
 </head>
 <body>
   <header>
@@ -83,36 +18,32 @@
       <a href="blog.html">Blog</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
-    <button id="dark-toggle" class="toggle-btn" aria-label="Darkmode umschalten">🌙</button>
+    <button id="dark-toggle" class="toggle-btn">🌙</button>
   </header>
 
-  <main class="product-page">
-    <div class="product-images">
-      <img src="assets/img/color-change-mug-handle-right.jpg" alt="Farbwechsel Tasse mit Henkel rechts" class="lightbox" />
-      <img src="assets/img/color-change-mug-front.jpg" alt="Farbwechsel Tasse Frontansicht" class="lightbox" />
-      <img src="assets/img/color-change-mug-side.jpg" alt="Farbwechsel Tasse Seitenansicht" class="lightbox" />
-      <img src="assets/img/color-change-mug-back.jpg" alt="Farbwechsel Tasse Rückseite" class="lightbox" />
+  <main class="produkt-seite">
+    <div class="produkt-bilder">
+      <img src="assets/img/color-change-mug-handle-right.jpg" alt="Farbwechsel-Tasse mit Henkel rechts" class="lightbox" />
+      <img src="assets/img/color-change-mug-front.png" alt="Farbwechsel-Tasse Vorderseite" class="lightbox" />
+      <img src="assets/img/color-change-mug-side.png" alt="Farbwechsel-Tasse Seitenansicht" class="lightbox" />
+      <img src="assets/img/color-change-mug-back.png" alt="Farbwechsel-Tasse Rückseite" class="lightbox" />
     </div>
 
-    <div class="product-info">
-      <h1>Farbwechsel Tasse „Glow From Within“</h1>
-      <p>Beginne deinen Tag stilvoll – mit unserer hochwertigen Farbwechsel-Tasse, die beim Einfüllen heißer Flüssigkeit ihr Design enthüllt.</p>
-      <p class="price">€16,95</p>
-      <p>★★★★★ (58 Bewertungen)</p>
-      <a href="https://deinshoplink.com" class="buy-button" target="_blank">Jetzt kaufen</a>
+    <div class="produkt-details">
+      <h1>Farbwechsel Tasse – Glow From Within</h1>
+      <p class="produkt-label thermo">🌡️ Thermo-Funktion</p>
+      <p class="beschreibung">Diese Tasse verändert ihre Farbe, wenn heiße Flüssigkeit eingefüllt wird – und enthüllt dabei das elegante JadeBeauty Logo. Perfekt für deine Selfcare-Morgenroutine.</p>
 
-      <div class="product-section">
-        <h2>Thermo-Funktion</h2>
-        <p>Der einzigartige Thermoeffekt lässt das verborgene Design erscheinen, sobald du heiße Getränke einfüllst.</p>
-      </div>
-      <div class="product-section">
-        <h2>Material</h2>
-        <p>Hochwertige Keramik, 100 % BPA-frei. Spülmaschinengeeignet (Handwäsche empfohlen zur Schonung des Effekts).</p>
-      </div>
-      <div class="product-section">
-        <h2>Perfekt für</h2>
-        <p>Selfcare-Routinen, Tee & Kaffee-Liebhaber, motivierende Morgenmomente und als Geschenkidee.</p>
-      </div>
+      <ul class="produkt-info">
+        <li><strong>Material:</strong> Keramik</li>
+        <li><strong>Größe:</strong> 330ml</li>
+        <li><strong>Besonderheit:</strong> Farbwechsel-Effekt durch Wärme</li>
+        <li><strong>Logo:</strong> JadeBeauty in Gold</li>
+      </ul>
+
+      <p class="preis">€16,95</p>
+      <p class="bewertung">★★★★★ (58 Bewertungen)</p>
+      <a href="https://www.amazon.de/" class="cta-button" target="_blank">Jetzt kaufen</a>
     </div>
   </main>
 
