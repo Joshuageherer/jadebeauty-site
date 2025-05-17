@@ -2,155 +2,100 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <title>Farbwechsel Tasse – JadeBeauty</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farbwechsel Tasse – Produktseite | JadeBeauty</title>
   <link rel="stylesheet" href="style.css">
-  <script src="darkmode.js" defer></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const thumbnails = document.querySelectorAll(".thumbnail");
-      const mainImage = document.getElementById("main-image");
-      thumbnails.forEach(thumb => {
-        thumb.addEventListener("click", () => {
-          mainImage.src = thumb.dataset.large;
-        });
-      });
+  <script defer>
+    function switchImage(imgSrc) {
+      document.getElementById('main-image').src = imgSrc;
+    }
 
-      const accordions = document.querySelectorAll(".accordion");
-      accordions.forEach(acc => {
-        acc.addEventListener("click", function () {
-          this.classList.toggle("active");
-          const panel = this.nextElementSibling;
-          panel.style.display = panel.style.display === "block" ? "none" : "block";
-        });
-      });
-    });
+    function toggleAccordion(id) {
+      const panel = document.getElementById(id);
+      panel.classList.toggle('open');
+    }
   </script>
   <style>
-    .product-container {
+    .product-page {
       max-width: 1100px;
       margin: auto;
       padding: 2rem;
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
-      background: var(--bg);
-      color: var(--text);
     }
-
-    .left-column {
-      flex: 1;
+    .product-images, .product-details {
+      flex: 1 1 500px;
     }
-
-    .right-column {
-      flex: 1;
-    }
-
-    .main-image {
-      width: 100%;
-      border-radius: 12px;
-    }
-
     .thumbnails {
       display: flex;
       gap: 0.5rem;
       margin-top: 1rem;
     }
-
-    .thumbnail {
+    .thumbnails img {
       width: 60px;
       height: 60px;
       object-fit: cover;
+      cursor: pointer;
       border-radius: 6px;
-      cursor: pointer;
-      border: 2px solid transparent;
-    }
-
-    .thumbnail:hover {
-      border-color: var(--accent);
-    }
-
-    .accordion {
-      background-color: var(--accent);
-      color: white;
-      cursor: pointer;
-      padding: 1rem;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 1.1rem;
-      transition: background-color 0.3s ease;
-      border-radius: 5px;
-      margin-top: 1rem;
-    }
-
-    .accordion:hover {
-      background-color: var(--gold);
-      color: var(--text);
-    }
-
-    .panel {
-      padding: 1rem;
-      display: none;
-      background-color: var(--bg);
-      color: var(--text);
       border: 1px solid #ccc;
-      border-radius: 0 0 8px 8px;
+    }
+    .accordion {
+      margin-top: 2rem;
+    }
+    .accordion-section {
+      border-top: 1px solid #ccc;
+      padding: 1rem 0;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .accordion-panel {
+      display: none;
+      padding: 0.5rem 0;
+    }
+    .accordion-panel.open {
+      display: block;
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Start</a>
-      <a href="shop.html">Shop</a>
-      <a href="anleitung.html">Anleitung</a>
-      <a href="blog.html">Blog</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-    <button id="dark-toggle" class="toggle-btn">🌙</button>
-  </header>
-
-  <main class="product-container">
-    <div class="left-column">
-      <img id="main-image" class="main-image" src="assets/img/color-change-mug-front.png" alt="Farbwechsel Tasse">
+  <main class="product-page">
+    <section class="product-images">
+      <img id="main-image" src="assets/img/color-change-mug-handle-right.jpg" alt="Farbwechsel Tasse" style="width: 100%; max-width: 500px; border-radius: 12px;">
       <div class="thumbnails">
-        <img class="thumbnail" src="assets/img/color-change-mug-front.png" data-large="assets/img/color-change-mug-front.png" alt="Vorderseite">
-        <img class="thumbnail" src="assets/img/color-change-mug-back.png" data-large="assets/img/color-change-mug-back.png" alt="Rückseite">
-        <img class="thumbnail" src="assets/img/color-change-mug-handle-right.jpg" data-large="assets/img/color-change-mug-handle-right.jpg" alt="Henkel rechts">
-        <img class="thumbnail" src="assets/img/color-change-mug-handle-left.png" data-large="assets/img/color-change-mug-handle-left.png" alt="Henkel links">
-        <img class="thumbnail" src="assets/img/color-change-function.png" data-large="assets/img/color-change-function.png" alt="Thermo Effekt">
+        <img src="assets/img/color-change-mug-handle-right.jpg" onclick="switchImage(this.src)" alt="Tasse rechts">
+        <img src="assets/img/color-change-mug-front.png" onclick="switchImage(this.src)" alt="Tasse vorne">
+        <img src="assets/img/color-change-mug-back.png" onclick="switchImage(this.src)" alt="Tasse hinten">
+        <img src="assets/img/color-change-mug-handle-left.png" onclick="switchImage(this.src)" alt="Tasse links">
+        <img src="assets/img/color-change-function.png" onclick="switchImage(this.src)" alt="Farbwechsel Funktion">
       </div>
-    </div>
+    </section>
 
-    <div class="right-column">
+    <section class="product-details">
+      <span class="label" style="background: var(--accent); color: white; padding: 0.3rem 0.6rem; border-radius: 5px; font-size: 0.9rem;">Thermo-Funktion</span>
       <h1>Farbwechsel Tasse</h1>
-      <p>Beginne deinen Tag mit Stil – die Thermo-Funktion lässt das Design erst beim Einfüllen heißer Flüssigkeit sichtbar werden.</p>
-      <p><strong>Preis:</strong> €16,95</p>
-      <p>🌡️ <strong>Thermo-Funktion</strong></p>
-      <p>⭐️⭐️⭐️⭐️☆ (58 Bewertungen)</p>
-      <a href="shop.html" class="cta-button">Jetzt kaufen</a>
+      <p>Beginne deinen Tag mit Stil – mit einer magischen Farbwechselfunktion.</p>
+      <p><strong>€16,95</strong></p>
+      <p style="color: gray;">★★★★★ (58 Bewertungen)</p>
+      <a href="shop.html" class="cta-button">In den Warenkorb</a>
 
-      <button class="accordion">Anwendung</button>
-      <div class="panel">
-        <p>Fülle deine Lieblingsgetränke ein – erst dann erscheint das geheime Design. Perfekt für Zuhause oder als Geschenk!</p>
-      </div>
+      <div class="accordion">
+        <div class="accordion-section" onclick="toggleAccordion('panel1')">Anwendung</div>
+        <div class="accordion-panel" id="panel1">
+          Einfach mit heißem Wasser befüllen – die Tasse wechselt sanft ihre Farbe und zeigt das JadeBeauty Design.
+        </div>
 
-      <button class="accordion">Warum es wirkt</button>
-      <div class="panel">
-        <p>Die Farbe ändert sich durch Hitze – eine Überraschung mit jedem Schluck! Macht jeden Morgen zu einem kleinen Highlight.</p>
-      </div>
+        <div class="accordion-section" onclick="toggleAccordion('panel2')">Warum es wirkt</div>
+        <div class="accordion-panel" id="panel2">
+          Der psychologische Effekt des Farbwechsels macht deine Morgenroutine bewusster und achtsamer.
+        </div>
 
-      <button class="accordion">Hauptmerkmale</button>
-      <div class="panel">
-        <ul>
-          <li>Thermo-Material mit Spezialbeschichtung</li>
-          <li>300ml Fassungsvermögen</li>
-          <li>Handwäsche empfohlen</li>
-        </ul>
+        <div class="accordion-section" onclick="toggleAccordion('panel3')">Hauptmerkmale</div>
+        <div class="accordion-panel" id="panel3">
+          Thermoreaktive Beschichtung, mattes Finish, für Spülmaschine geeignet, 330ml Volumen.
+        </div>
       </div>
-    </div>
+    </section>
   </main>
 </body>
 </html>
