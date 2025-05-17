@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farbwechsel Tasse – Produktdetail | JadeBeauty</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Erlebe die Farbwechsel-Tasse 'Glow From Within' von JadeBeauty – stilvoll, funktional und inspirierend." />
+  <title>Farbwechsel Tasse | Glow From Within | JadeBeauty</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="darkmode.js" defer></script>
 </head>
 <body>
   <header>
@@ -15,112 +17,86 @@
       <a href="blog.html">Blog</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
-    <button id="dark-toggle">🌙</button>
+    <button id="dark-toggle" class="toggle-btn">🌙</button>
   </header>
 
   <main class="product-detail">
-    <section class="product-container">
-      <div class="image-gallery">
-        <img id="main-img" src="assets/img/color-change-mug-handle-right.jpg" alt="Farbwechsel Tasse">
-        <div class="thumbnail-row">
-          <img src="assets/img/color-change-mug-handle-right.jpg" class="thumb" alt="Ansicht 1">
-          <img src="assets/img/color-change-mug-handle-left.png" class="thumb" alt="Ansicht 2">
-          <img src="assets/img/color-change-mug-front.png" class="thumb" alt="Frontansicht">
-          <img src="assets/img/color-change-mug-back.png" class="thumb" alt="Rückseite">
-          <img src="assets/img/color-change-function.png" class="thumb" alt="Farbwechsel Funktion">
-        </div>
+    <div class="gallery">
+      <img id="main-image" src="assets/img/color-change-mug-handle-right.jpg" alt="Farbwechsel Tasse Glow From Within" />
+      <div class="thumbnails">
+        <img src="assets/img/color-change-mug-handle-right.jpg" onclick="setMainImage(this.src)" />
+        <img src="assets/img/color-change-mug-handle-left.png" onclick="setMainImage(this.src)" />
+        <img src="assets/img/color-change-mug-front.png" onclick="setMainImage(this.src)" />
+        <img src="assets/img/color-change-mug-back.png" onclick="setMainImage(this.src)" />
+        <img src="assets/img/color-change-function.png" onclick="setMainImage(this.src)" />
       </div>
+    </div>
 
-      <div class="product-info">
-        <h1>Farbwechsel Tasse – Glow From Within</h1>
-        <p class="subtitle">Beginne deinen Tag mit Stil ✨</p>
-        <div class="rating">★★★★★ <span>(58 Bewertungen)</span></div>
+    <div class="product-info">
+      <h1>Farbwechsel Tasse | Glow From Within</h1>
+      <p class="tagline">Beginne deinen Tag mit Stil & einem Farbwechsel-Effekt.</p>
+      <div class="price-rating">
         <p class="price">€16,95</p>
-        <p class="verfuegbar">Sofort lieferbar – Versand in 1–3 Tagen</p>
-        <button class="buy-button">In den Warenkorb</button>
-
-        <div class="icons">
-          <div class="icon-item">🌡️ Farbwechsel-Effekt</div>
-          <div class="icon-item">🧼 Spülmaschinenfest</div>
-          <div class="icon-item">🌱 Nachhaltig produziert</div>
-        </div>
-
-        <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-toggle">Anwendung</button>
-            <div class="accordion-content">
-              <p>Einfach heißes Getränk einfüllen und das Design verwandelt sich sichtbar.</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button class="accordion-toggle">Warum es wirkt</button>
-            <div class="accordion-content">
-              <p>Motivierende Botschaft + Design-Verwandlung für einen besseren Start in den Tag.</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button class="accordion-toggle">Hauptmaterialien</button>
-            <div class="accordion-content">
-              <p>Keramik mit Thermobeschichtung. BPA-frei.</p>
-            </div>
-          </div>
-        </div>
+        <p class="rating">★★★★★ (58 Bewertungen)</p>
       </div>
-    </section>
-
-    <section class="recommendations">
-      <h2>Wird oft mitbestellt</h2>
-      <div class="scroll-row">
-        <div class="product-mini">
-          <img src="assets/img/cosmetic-bag.jpg" alt="Kosmetiktasche">
-          <p>Kosmetiktasche</p>
-          <span>€18,95</span>
-        </div>
-        <div class="product-mini">
-          <img src="assets/img/white-sage-candle-closed.jpg" alt="Duftkerze">
-          <p>White Sage Duftkerze</p>
-          <span>€17,95</span>
-        </div>
-        <div class="product-mini">
-          <img src="assets/img/logo-mug.jpg" alt="Selfcare Tasse">
-          <p>Selfcare Tasse</p>
-          <span>€16,00</span>
-        </div>
+      <div class="product-icons">
+        <div><span>🎨</span> Farbwechsel bei Wärme</div>
+        <div><span>🍃</span> Nachhaltig produziert</div>
+        <div><span>💧</span> Für Heißgetränke geeignet</div>
       </div>
-    </section>
-
-    <section class="reviews">
-      <h2>Was unsere Kunden sagen</h2>
-      <div class="review">
-        <strong>Alexandra M.</strong>
-        <p>Ich nutze die Tasse jeden Morgen. Die Farbänderung macht einfach gute Laune!</p>
-      </div>
-      <div class="review">
-        <strong>Me-Time</strong>
-        <p>Ein echtes Highlight in meiner Selfcare-Routine – ideal als Geschenk.</p>
-      </div>
-    </section>
+      <button class="cta-button">In den Warenkorb</button>
+    </div>
   </main>
+
+  <section class="accordion">
+    <details>
+      <summary>Anwendung</summary>
+      <p>Gieße dein Lieblingsgetränk ein und sieh zu, wie sich das Design verändert.</p>
+    </details>
+    <details>
+      <summary>Warum es wirkt</summary>
+      <p>Der Farbwechsel-Effekt macht deinen Morgen zu einem visuellen Erlebnis – kombiniert mit einem inspirierenden Design.</p>
+    </details>
+    <details>
+      <summary>Materialien</summary>
+      <p>Keramik, thermosensitives Finish, handveredelt mit JadeBeauty Design.</p>
+    </details>
+  </section>
+
+  <section class="related">
+    <h2>Wird oft mitbestellt</h2>
+    <div class="related-items">
+      <div class="item">
+        <img src="assets/img/white-sage-candle-closed.jpg" alt="Duftkerze White Sage" />
+        <p>Duftkerze White Sage</p>
+        <p class="price">€17,95</p>
+      </div>
+      <div class="item">
+        <img src="assets/img/cotton-cosmetic-bag.jpg" alt="Kosmetiktasche" />
+        <p>Kosmetiktasche</p>
+        <p class="price">€18,95</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <h2>Kundenbewertungen</h2>
+    <article>
+      <p><strong>Alexandra M.</strong> ⭐⭐⭐⭐⭐<br>Nutze die Tasse täglich – der Farbwechsel-Effekt macht richtig Spaß und motiviert für den Tag!</p>
+    </article>
+    <article>
+      <p><strong>Lisa W.</strong> ⭐⭐⭐⭐⭐<br>Super Qualität und schönes Design. Ideal als Geschenk.</p>
+    </article>
+  </section>
 
   <footer>
     <p>&copy; 2025 JadeBeauty | <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
 
-  <script src="darkmode.js"></script>
   <script>
-    document.querySelectorAll('.thumb').forEach(thumb => {
-      thumb.addEventListener('click', () => {
-        document.getElementById('main-img').src = thumb.src;
-      });
-    });
-
-    document.querySelectorAll('.accordion-toggle').forEach(button => {
-      button.addEventListener('click', () => {
-        button.classList.toggle('active');
-        const content = button.nextElementSibling;
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-      });
-    });
+    function setMainImage(src) {
+      document.getElementById('main-image').src = src;
+    }
   </script>
 </body>
 </html>
