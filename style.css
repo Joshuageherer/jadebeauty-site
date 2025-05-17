@@ -60,6 +60,7 @@ h1, h2 {
   margin-top: 2rem;
 }
 .warum-box {
+  background: #e6f2ec; /* hellgrün im Lightmode */
   background: var(--box);
   padding: 1rem 1.5rem;
   border-radius: 12px;
