@@ -1,13 +1,104 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Farbwechsel Tasse | JadeBeauty</title>
-  <meta name="description" content="Entdecke die magische Farbwechsel Tasse von JadeBeauty – mit Logo, Thermo-Funktion und stilvollem Design." />
-  <link rel="stylesheet" href="style.css" />
-  <script src="lightbox.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farbwechsel Tasse – Produktseite | JadeBeauty</title>
+  <link rel="stylesheet" href="style.css">
   <script src="darkmode.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const thumbnails = document.querySelectorAll(".thumbnail");
+      const mainImage = document.getElementById("main-image");
+      thumbnails.forEach(thumb => {
+        thumb.addEventListener("click", () => {
+          mainImage.src = thumb.dataset.large;
+        });
+      });
+
+      const accordions = document.querySelectorAll(".accordion");
+      accordions.forEach(acc => {
+        acc.addEventListener("click", function () {
+          this.classList.toggle("active");
+          const panel = this.nextElementSibling;
+          panel.style.display = panel.style.display === "block" ? "none" : "block";
+        });
+      });
+    });
+  </script>
+  <style>
+    .product-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .left-column {
+      flex: 1;
+    }
+
+    .right-column {
+      flex: 1;
+    }
+
+    .main-image {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .thumbnails {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .thumbnail {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .thumbnail:hover {
+      border-color: var(--accent);
+    }
+
+    .accordion {
+      background-color: var(--accent);
+      color: white;
+      cursor: pointer;
+      padding: 1rem;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+
+    .accordion:hover {
+      background-color: var(--gold);
+      color: var(--text);
+    }
+
+    .panel {
+      padding: 1rem;
+      display: none;
+      background-color: var(--bg);
+      color: var(--text);
+      border: 1px solid #ccc;
+      border-radius: 0 0 8px 8px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -21,34 +112,45 @@
     <button id="dark-toggle" class="toggle-btn">🌙</button>
   </header>
 
-  <main class="produkt-seite">
-    <div class="produkt-bilder">
-      <img src="assets/img/color-change-mug-handle-right.jpg" alt="Farbwechsel-Tasse mit Henkel rechts" class="lightbox" />
-      <img src="assets/img/color-change-mug-front.png" alt="Farbwechsel-Tasse Vorderseite" class="lightbox" />
-      <img src="assets/img/color-change-mug-side.png" alt="Farbwechsel-Tasse Seitenansicht" class="lightbox" />
-      <img src="assets/img/color-change-mug-back.png" alt="Farbwechsel-Tasse Rückseite" class="lightbox" />
+  <main class="product-container">
+    <div class="left-column">
+      <img id="main-image" class="main-image" src="assets/img/color-change-mug-front.png" alt="Farbwechsel Tasse">
+      <div class="thumbnails">
+        <img class="thumbnail" src="assets/img/color-change-mug-front.png" data-large="assets/img/color-change-mug-front.png" alt="Vorderseite">
+        <img class="thumbnail" src="assets/img/color-change-mug-back.png" data-large="assets/img/color-change-mug-back.png" alt="Rückseite">
+        <img class="thumbnail" src="assets/img/color-change-mug-handle-right.jpg" data-large="assets/img/color-change-mug-handle-right.jpg" alt="Henkel rechts">
+        <img class="thumbnail" src="assets/img/color-change-mug-handle-left.png" data-large="assets/img/color-change-mug-handle-left.png" alt="Henkel links">
+        <img class="thumbnail" src="assets/img/color-change-function.png" data-large="assets/img/color-change-function.png" alt="Thermo Effekt">
+      </div>
     </div>
 
-    <div class="produkt-details">
-      <h1>Farbwechsel Tasse – Glow From Within</h1>
-      <p class="produkt-label thermo">🌡️ Thermo-Funktion</p>
-      <p class="beschreibung">Diese Tasse verändert ihre Farbe, wenn heiße Flüssigkeit eingefüllt wird – und enthüllt dabei das elegante JadeBeauty Logo. Perfekt für deine Selfcare-Morgenroutine.</p>
+    <div class="right-column">
+      <h1>Farbwechsel Tasse</h1>
+      <p>Beginne deinen Tag mit Stil – die Thermo-Funktion lässt das Design erst beim Einfüllen heißer Flüssigkeit sichtbar werden.</p>
+      <p><strong>Preis:</strong> €16,95</p>
+      <p>🌡️ <strong>Thermo-Funktion</strong></p>
+      <p>⭐️⭐️⭐️⭐️☆ (58 Bewertungen)</p>
+      <a href="shop.html" class="cta-button">Jetzt kaufen</a>
 
-      <ul class="produkt-info">
-        <li><strong>Material:</strong> Keramik</li>
-        <li><strong>Größe:</strong> 330ml</li>
-        <li><strong>Besonderheit:</strong> Farbwechsel-Effekt durch Wärme</li>
-        <li><strong>Logo:</strong> JadeBeauty in Gold</li>
-      </ul>
+      <button class="accordion">Anwendung</button>
+      <div class="panel">
+        <p>Fülle deine Lieblingsgetränke ein – erst dann erscheint das geheime Design. Perfekt für Zuhause oder als Geschenk!</p>
+      </div>
 
-      <p class="preis">€16,95</p>
-      <p class="bewertung">★★★★★ (58 Bewertungen)</p>
-      <a href="https://www.amazon.de/" class="cta-button" target="_blank">Jetzt kaufen</a>
+      <button class="accordion">Warum es wirkt</button>
+      <div class="panel">
+        <p>Die Farbe ändert sich durch Hitze – eine Überraschung mit jedem Schluck! Macht jeden Morgen zu einem kleinen Highlight.</p>
+      </div>
+
+      <button class="accordion">Hauptmerkmale</button>
+      <div class="panel">
+        <ul>
+          <li>Thermo-Material mit Spezialbeschichtung</li>
+          <li>300ml Fassungsvermögen</li>
+          <li>Handwäsche empfohlen</li>
+        </ul>
+      </div>
     </div>
   </main>
-
-  <footer>
-    <p>&copy; 2025 JadeBeauty | <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
-  </footer>
 </body>
 </html>
