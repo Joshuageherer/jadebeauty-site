@@ -1,86 +1,88 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farbwechsel Tasse – JadeBeauty</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>JadeBeauty – Glow From Within</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Glow From Within mit Gua Sha, Selfcare & natürlichen Produkten von JadeBeauty.">
+  <link rel="stylesheet" href="style.css" />
+  <script src="darkmode.js" defer></script>
 </head>
 <body>
   <header>
     <nav>
-      <a href="index.html">Start</a>
+      <a href="index.html" aria-current="page">Start</a>
       <a href="shop.html">Shop</a>
       <a href="anleitung.html">Anleitung</a>
       <a href="blog.html">Blog</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
-    <button id="dark-toggle">🌙</button>
+    <button id="dark-toggle" class="toggle-btn">🌙</button>
   </header>
 
-  <main class="product-detail">
-    <section class="product-container">
-      <div class="product-images">
-        <img id="main-image" src="assets/img/color-change-mug-handle-right.jpg" alt="Farbwechsel Tasse" />
-        <div class="thumbnails">
-          <img src="assets/img/color-change-mug-handle-right.jpg" alt="Ansicht 1" onclick="swapImage(this)">
-          <img src="assets/img/color-change-mug-handle-left.png" alt="Ansicht 2" onclick="swapImage(this)">
-          <img src="assets/img/color-change-mug-front.png" alt="Ansicht 3" onclick="swapImage(this)">
-          <img src="assets/img/color-change-mug-back.png" alt="Ansicht 4" onclick="swapImage(this)">
-          <img src="assets/img/color-change-function.png" alt="Thermo Funktion" onclick="swapImage(this)">
-        </div>
-      </div>
-
-      <div class="product-info">
-        <h1>Farbwechsel Tasse | Glow From Within</h1>
-        <p class="subtitle">Verleiht deinem Morgen eine besondere Note</p>
-        <div class="price">
-          <strong>€16,95</strong>
-          <span class="stars">★★★★★</span>
-          <span>(58 Bewertungen)</span>
-        </div>
-        <button class="cta">In den Warenkorb</button>
-
-        <div class="bullet-icons">
-          <span>🌟 Farbwechsel-Funktion</span>
-          <span>☕ Spülmaschinengeeignet</span>
-          <span>💚 100% vegan bedruckt</span>
-        </div>
-
-        <details>
-          <summary>Anwendung</summary>
-          <p>Einfach heißes Wasser einfüllen und das Design wechselt Farbe – ideal für Tee, Kaffee oder Selfcare-Momente.</p>
-        </details>
-        <details>
-          <summary>Warum es wirkt</summary>
-          <p>Die besondere Thermobeschichtung sorgt für einen Wow-Effekt beim Einschenken.</p>
-        </details>
-        <details>
-          <summary>Hauptmaterial</summary>
-          <p>Keramik, mit umweltfreundlicher Farbwechsel-Beschichtung.</p>
-        </details>
+  <main>
+    <section class="warum-jadebeauty">
+      <h2>Warum JadeBeauty?</h2>
+      <div class="warum-grid">
+        <div class="warum-box">✨ Handgefertigte Produkte aus natürlichem Jade – für deine Haut nur das Beste.</div>
+        <div class="warum-box">🌿 Fördert die natürliche Schönheit und sorgt für einen strahlenden Teint.</div>
+        <div class="warum-box">💆‍♀️ Entspannt Gesicht und Geist mit traditioneller Gua Sha Technik.</div>
+        <div class="warum-box">🌱 100 % vegan, tierversuchsfrei und nachhaltig produziert.</div>
+        <div class="warum-box">💚 Perfekt für deine tägliche Selfcare-Routine, einfach anzuwenden und effektiv.</div>
       </div>
     </section>
 
-    <section class="recommendations">
-      <h2>Wurde oft mitbestellt</h2>
-      <div class="recommendation-row">
-        <article><img src="assets/img/selfcare-pouch.jpg" alt="Tasche"><p>Kosmetiktasche</p><p>€18,95</p></article>
-        <article><img src="assets/img/white-sage-candle-closed.jpg" alt="Kerze"><p>White Sage Duftkerze</p><p>€17,95</p></article>
-        <article><img src="assets/img/logo-mug.jpg" alt="Tasse"><p>Logo Tasse</p><p>€16,00</p></article>
+    <section>
+      <h2>Unsere Highlights</h2>
+      <div class="produkte">
+        <div class="produkt">
+          <span class="label vegan">🌿 100% Vegan</span>
+          <img src="assets/img/kosmetiktasche.jpg" alt="Kosmetiktasche mit Logo" />
+          <h3>Kosmetiktasche</h3>
+          <p>Für deine Selfcare-Routine.</p>
+          <p class="preis">€18,95</p>
+          <p class="bewertung">★★★★☆ (37 Bewertungen)</p>
+          <a href="shop.html" class="cta-button">Zum Shop</a>
+        </div>
+        <div class="produkt">
+          <span class="label thermo">🔥 Thermo-Funktion</span>
+          <img src="assets/img/color-change-mug-handle-right.jpg" alt="Farbwechsel-Tasse" />
+          <h3>Farbwechsel-Tasse</h3>
+          <p>Beginne deinen Tag mit Stil.</p>
+          <p class="preis">€16,95</p>
+          <p class="bewertung">★★★★☆ (58 Bewertungen)</p>
+          <a href="shop.html" class="cta-button">Zum Shop</a>
+        </div>
+        <div class="produkt">
+          <span class="label vegan">🌿 100% Vegan</span>
+          <img src="assets/img/white-sage-candle-closed.jpg" alt="White Sage Duftkerze" />
+          <h3>White Sage Duftkerze</h3>
+          <p>Entspannung pur für deine Sinne.</p>
+          <p class="preis">€17,95</p>
+          <p class="bewertung">★★★★★ (112 Bewertungen)</p>
+          <a href="shop.html" class="cta-button">Zum Shop</a>
+        </div>
       </div>
     </section>
+
+    
+<section class="inspiration-section">
+  <h2>Inspiration</h2>
+  <div class="inspiration-fixed-grid">
+    <img src="assets/img/inspiration1.png" alt="Inspiration 1" />
+    <img src="assets/img/inspiration2.png" alt="Inspiration 2" />
+    <img src="assets/img/inspiration3.png" alt="Inspiration 3" />
+    <img src="assets/img/inspiration4.jpg" alt="Inspiration 4" />
+    <img src="assets/img/inspiration5.jpg" alt="Inspiration 5" />
+    <img src="assets/img/inspiration6.jpg" alt="Inspiration 6" />
+  </div>
+</section>
+
   </main>
 
   <footer>
-    <p>&copy; 2025 JadeBeauty – <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+    <p>&copy; 2025 JadeBeauty | <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
-
-  <script>
-    function swapImage(element) {
-      document.getElementById('main-image').src = element.src;
-    }
-  </script>
 </body>
 </html>
-
