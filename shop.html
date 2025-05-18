@@ -1,72 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>JadeBeauty – Shop</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Entdecke die schönsten Produkte für deine Selfcare-Routine im JadeBeauty Shop.">
-  <link rel="stylesheet" href="style.css" />
-  <script src="darkmode.js" defer></script>
+  <title>Shop – JadeBeauty</title>
+  <link rel="stylesheet" href="style_final_with_nav_wrapper.css" />
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html">Start</a>
-      <a href="shop.html" aria-current="page">Shop</a>
-      <a href="anleitung.html">Anleitung</a>
-      <a href="blog.html">Blog</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-    <button id="dark-toggle" class="toggle-btn">🌙</button>
+    <div class="nav-wrapper">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="anleitung.html">Anleitung</a>
+        <a href="blog.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <button class="darkmode-toggle" id="darkToggle">🌙</button>
+    </div>
   </header>
 
   <main>
-    <h1>Unser Shop</h1>
-    <div class="produkte shop-grid">
-      <article class="produkt">
-        <span class="label vegan">🌿 100% Vegan</span>
-        <img src="assets/img/kosmetiktasche.jpg" alt="Kosmetiktasche mit Logo" />
-        <h3>Kosmetiktasche</h3>
-        <p>Für deine tägliche Selfcare.</p>
-        <p class="preis">€18,95</p>
-        <p class="bewertung">★★★★☆ (37 Bewertungen)</p>
-        <a href="product-kosmetiktasche.html" class="cta-button">Jetzt kaufen</a>
-      </article>
-
-      <article class="produkt">
-        <span class="label thermo">🔥 Thermo-Funktion</span>
-        <img src="assets/img/color-change-mug-handle-right.jpg" alt="Farbwechsel-Tasse" />
+    <h2>Shop</h2>
+    <div class="product-grid">
+      <!-- Wiederverwendbare Produktboxen hier -->
+      <div class="product-box">
+        <img src="assets/img/color-change-mug-handle-right.jpg" alt="Tasse" />
         <h3>Farbwechsel-Tasse</h3>
-        <p>Beginne deinen Tag mit Stil.</p>
-        <p class="preis">€16,95</p>
-        <p class="bewertung">★★★★☆ (58 Bewertungen)</p>
-        <a href="product-color-mug.html" class="cta-button">Jetzt kaufen</a>
-      </article>
-
-      <article class="produkt">
-        <span class="label vegan">🌿 100% Vegan</span>
-        <img src="assets/img/white-sage-candle-closed.jpg" alt="White Sage Duftkerze" />
-        <h3>White Sage Duftkerze</h3>
-        <p>Entspannung pur für deine Sinne.</p>
-        <p class="preis">€17,95</p>
-        <p class="bewertung">★★★★★ (112 Bewertungen)</p>
-        <a href="product-kerze.html" class="cta-button">Jetzt kaufen</a>
-      </article>
-
-      <article class="produkt">
-        <img src="assets/img/selfcare-tasse.jpg" alt="Selfcare Tasse" />
-        <h3>Selfcare Tasse</h3>
-        <p>Elegantes Design für deine Pause.</p>
-        <p class="preis">€16,00</p>
-        <p class="bewertung">★★★★☆ (42 Bewertungen)</p>
-        <a href="product-selfcare-tasse.html" class="cta-button">Jetzt kaufen</a>
-      </article>
+        <p>15,99 €</p>
+      </div>
+      <div class="product-box">
+        <img src="assets/img/white-sage-candle-closed.jpg" alt="Kerze" />
+        <h3>Duftkerze</h3>
+        <p>13,99 €</p>
+      </div>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 JadeBeauty | <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
+  <script src="darkmode.js"></script>
 </body>
 </html>
