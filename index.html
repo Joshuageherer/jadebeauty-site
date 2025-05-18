@@ -4,22 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JadeBeauty – Natürlich. Schön. Du.</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style_final_with_nav_wrapper.css" />
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="blog.html">Blog</a>
-      <a href="anleitung.html">Anleitung</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
+    <div class="nav-wrapper">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="anleitung.html">Anleitung</a>
+        <a href="blog.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <button class="darkmode-toggle" id="darkToggle">🌙</button>
+    </div>
   </header>
 
   <main>
-    <!-- Warum JadeBeauty -->
-    <section id="warum" class="warum-section">
+    <section id="warum">
       <h2>Warum JadeBeauty?</h2>
       <div class="vorteile-grid">
         <div class="vorteil-box">
@@ -28,47 +30,38 @@
         </div>
         <div class="vorteil-box">
           <h3>💚 Nachhaltig & Vegan</h3>
-          <p>Wir achten auf faire Herstellung und tierversuchsfreie Inhaltsstoffe.</p>
+          <p>Faire Herstellung und tierversuchsfreie Inhaltsstoffe.</p>
         </div>
         <div class="vorteil-box">
           <h3>✨ Elegantes Design</h3>
-          <p>JadeBeauty steht für Ästhetik – jedes Stück ein stilvolles Statement.</p>
+          <p>JadeBeauty steht für Ästhetik – jedes Stück ein Statement.</p>
         </div>
       </div>
     </section>
 
-    <!-- Produkt-Vorschau -->
     <section class="product-preview">
       <h2>Unsere Highlights</h2>
       <div class="product-grid">
-        <!-- Produkt 1: Farbwechsel-Tasse -->
-        <a href="https://www.etsy.com/listing/1738681687/personalized-glow-from-within-color-morphing-mug" target="_blank" class="product-box">
-          <div class="product-labels">
-            <span class="product-label">🔥 Thermo-Funktion</span>
-          </div>
-          <img src="assets/img/color-change-mug-handle-right.jpg" alt="Glow From Within Farbwechsel-Tasse">
+        <!-- Produkt 1 -->
+        <a href="#" class="product-box">
+          <div class="product-labels"><span class="product-label">🔥 Thermo-Funktion</span></div>
+          <img src="assets/img/color-change-mug-handle-right.jpg" alt="Glow Mug">
           <h3>Farbwechsel-Tasse</h3>
           <p>Beginne deinen Tag mit Stil.</p>
           <p>★★★★★ (112 Bewertungen)</p>
         </a>
-
-        <!-- Produkt 2: Duftkerze -->
-        <a href="https://www.etsy.com/listing/4307087003/duftkerze-white-sage-lavender" target="_blank" class="product-box">
-          <div class="product-labels">
-            <span class="product-label">🌿 100% Vegan</span>
-          </div>
-          <img src="assets/img/white-sage-candle-closed.jpg" alt="White Sage Duftkerze">
+        <!-- Produkt 2 -->
+        <a href="#" class="product-box">
+          <div class="product-labels"><span class="product-label">🌿 100% Vegan</span></div>
+          <img src="assets/img/white-sage-candle-closed.jpg" alt="Kerze">
           <h3>White Sage Duftkerze</h3>
-          <p>Entspannung pur für deine Sinne.</p>
+          <p>Entspannung für die Sinne.</p>
           <p>★★★★☆ (58 Bewertungen)</p>
         </a>
-
-        <!-- Produkt 3: Kosmetiktasche -->
-        <a href="https://www.etsy.com/listing/1738440763/kosmetiktasche-mit-jadebeauty-logo" target="_blank" class="product-box">
-          <div class="product-labels">
-            <span class="product-label">Bestseller</span>
-          </div>
-          <img src="assets/img/kosmetiktasche.jpg" alt="JadeBeauty Kosmetiktasche">
+        <!-- Produkt 3 -->
+        <a href="#" class="product-box">
+          <div class="product-labels"><span class="product-label">Bestseller</span></div>
+          <img src="assets/img/kosmetiktasche.jpg" alt="Kosmetiktasche">
           <h3>Kosmetiktasche</h3>
           <p>Praktisch, stilvoll, geräumig.</p>
           <p>★★★★☆ (37 Bewertungen)</p>
@@ -76,19 +69,12 @@
       </div>
     </section>
 
-    <!-- Inspiration -->
     <section id="inspiration" class="inspiration-section">
       <h2>✨ Inspiration</h2>
       <div class="inspiration-grid">
-        <a href="https://www.etsy.com/listing/4307087003/duftkerze-white-sage-lavender" target="_blank">
-          <img src="assets/img/inspiration1.png" alt="White Sage Candle">
-        </a>
-        <a href="https://www.etsy.com/listing/1738707965/self-care-is-not-selfish-tasse" target="_blank">
-          <img src="assets/img/inspiration2.png" alt="Self Care Mug">
-        </a>
-        <a href="https://www.etsy.com/listing/1738440763/kosmetiktasche-mit-jadebeauty-logo" target="_blank">
-          <img src="assets/img/inspiration3.png" alt="Kosmetiktasche">
-        </a>
+        <img src="assets/img/inspiration1.png" alt="Inspo 1" />
+        <img src="assets/img/inspiration2.png" alt="Inspo 2" />
+        <img src="assets/img/inspiration3.png" alt="Inspo 3" />
       </div>
     </section>
   </main>
@@ -96,7 +82,6 @@
   <footer>
     <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
-
   <script src="darkmode.js"></script>
 </body>
 </html>
