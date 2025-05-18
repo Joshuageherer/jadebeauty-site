@@ -1,16 +1,23 @@
-/* === Grundlayout === */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
+/* ========== Allgemeines Layout ========== */
 body {
   font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
   background-color: #fff;
   color: #222;
   line-height: 1.6;
-  transition: background-color 0.3s, color 0.3s;
+}
+
+body.darkmode {
+  background-color: #111;
+  color: #eee;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 a {
@@ -18,80 +25,225 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-  border-radius: 12px;
-}
-
-/* === Header + Navigation === */
+/* ========== Navigation ========== */
 header {
-  background-color: #f8f8f8;
-  padding: 16px 32px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  background-color: #e0f5ea;
+  padding: 20px;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 999;
+}
+
+body.darkmode header {
+  background-color: #1a1a1a;
 }
 
 nav {
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  font-size: 16px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav a {
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background-color 0.2s;
+  margin-left: 15px;
+  font-weight: bold;
+  color: #228b22;
 }
 
-nav a:hover {
-  background-color: #e0e0e0;
+body.darkmode nav a {
+  color: #7fff7f;
 }
 
-/* === Hauptbereiche === */
-main {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* === Warum JadeBeauty === */
-.warum-section {
-  margin-bottom: 60px;
-}
-
-.warum-section h2 {
+/* ========== Footer ========== */
+footer {
+  background-color: #f0f0f0;
   text-align: center;
-  margin-bottom: 30px;
+  padding: 30px 10px;
+  font-size: 14px;
+  margin-top: 50px;
 }
 
-.vorteile-grid {
+body.darkmode footer {
+  background-color: #1a1a1a;
+  color: #999;
+}
+
+/* ========== Produktboxen & Shop ========== */
+.produkt-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.produkt-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.produkt {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+body.darkmode .produkt {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.produkt img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.produkt h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.produkt .preis {
+  font-weight: bold;
+  color: #228b22;
+  margin-top: 8px;
+}
+
+body.darkmode .produkt .preis {
+  color: #7fff7f;
+}
+
+.produkt .bewertung {
+  font-size: 14px;
+  color: #777;
+}
+
+body.darkmode .produkt .bewertung {
+  color: #aaa;
+}
+
+.produkt-link:hover .produkt {
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ========== Darkmode Toggle Button ========== */
+.darkmode-toggle {
+  cursor: pointer;
+  background: none;
+  border: 2px solid #228b22;
+  color: #228b22;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+body.darkmode .darkmode-toggle {
+  border-color: #7fff7f;
+  color: #7fff7f;
+}
+
+/* ========== Blog / Content / Textformatierung ========== */
+article.blog-post {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+}
+
+body.darkmode article.blog-post {
+  background-color: #1c1c1c;
+  border-color: #333;
+}
+
+article.blog-post h2 {
+  margin-top: 0;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========== Formular & Kontakt ========== */
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea, button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+body.darkmode input,
+body.darkmode textarea {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+button {
+  background-color: #228b22;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+body.darkmode button {
+  background-color: #7fff7f;
+  color: #000;
+}
+
+
+.inspiration-grid, .vorteile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.inspiration-grid img, .vorteile-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.inspiration-grid img:hover {
+  transform: scale(1.05);
 }
 
 .vorteil-box {
-  background-color: #f3f3f3;
-  padding: 24px;
-  border-radius: 16px;
+  background: #f3f3f3;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  text-align: center;
 }
 
-/* === Produkt-Highlights === */
-.product-preview h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
 
+/* Produktbox Anpassungen */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 32px;
+  align-items: start;
 }
 
 .product-box {
@@ -101,92 +253,49 @@ main {
   text-align: center;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   transition: transform 0.3s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
 }
 
-.product-box:hover {
-  transform: scale(1.03);
+.product-box img {
+  max-height: 220px;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
-.product-box h3 {
-  margin-top: 12px;
-  font-size: 18px;
-  color: #333;
+/* Labels über den Produktboxen */
+.product-labels {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
-/* === Inspiration === */
-.inspiration-section {
-  margin-top: 60px;
+.product-label {
+  background-color: #7bbf6a;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
 }
 
-.inspiration-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.inspiration-grid {
+/* Warum JadeBeauty Boxen fixen */
+#warum .vorteile-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
 }
 
-.inspiration-grid img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
-}
-
-.inspiration-grid img:hover {
-  transform: scale(1.05);
-}
-
-/* === Footer === */
-footer {
-  background-color: #f8f8f8;
+#warum .vorteil-box {
+  background-color: #f3f3f3;
   padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   text-align: center;
-  font-size: 14px;
-  margin-top: 60px;
-}
-
-footer a {
-  color: #555;
-  margin: 0 8px;
-}
-
-/* === Darkmode === */
-body.darkmode {
-  background-color: #121212;
-  color: #eee;
-}
-
-body.darkmode header,
-body.darkmode footer {
-  background-color: #1e1e1e;
-}
-
-body.darkmode .vorteil-box,
-body.darkmode .product-box {
-  background-color: #2a2a2a;
-  color: #ddd;
-}
-
-body.darkmode nav a:hover {
-  background-color: #333;
-}
-
-body.darkmode .inspiration-grid img {
-  box-shadow: 0 4px 12px rgba(255,255,255,0.1);
-}
-
-/* === Responsive === */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .product-grid, .vorteile-grid, .inspiration-grid {
-    grid-template-columns: 1fr;
-  }
 }
