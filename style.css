@@ -354,3 +354,7 @@ body.darkmode .blog-card a:hover {
     font-size: 0.9rem;
   }
 }
+.blog-card:first-of-type img {
+  max-height: 140px;
+  object-fit: cover;
+}
