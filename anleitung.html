@@ -2,106 +2,35 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>JadeBeauty – Gua Sha Anleitung</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Schritt-für-Schritt Anleitung für die Gua Sha Anwendung mit JadeBeauty Produkten." />
-  <link rel="stylesheet" href="style.css" />
-  <script src="darkmode.js" defer></script>
-  <script src="lightbox.js" defer></script>
-  <style>
-    .guasha-step {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-    .guasha-step img {
-      max-width: 180px;
-      border-radius: 12px;
-      flex-shrink: 0;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .guasha-step img:hover {
-      transform: scale(1.05);
-    }
-    .guasha-step p {
-      font-size: 1.1rem;
-      color: var(--text);
-      max-width: 600px;
-      margin: 0;
-    }
-    @media (max-width: 600px) {
-      .guasha-step {
-        flex-direction: column;
-        text-align: center;
-      }
-      .guasha-step p {
-        max-width: 100%;
-      }
-    }
-    .repeat-note {
-      font-size: 1.2rem;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 2rem;
-      color: var(--accent);
-    }
-    .blog-post {
-      text-align: center;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog – JadeBeauty</title>
+  <link rel="stylesheet" href="style_final_with_nav_wrapper.css" />
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html">Start</a>
-      <a href="shop.html">Shop</a>
-      <a href="anleitung.html" aria-current="page">Anleitung</a>
-      <a href="blog.html">Blog</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-    <button id="dark-toggle" class="toggle-btn" aria-label="Darkmode umschalten">🌙</button>
+    <div class="nav-wrapper">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="anleitung.html">Anleitung</a>
+        <a href="blog.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <button class="darkmode-toggle" id="darkToggle">🌙</button>
+    </div>
   </header>
 
   <main>
+    <h2>Blog</h2>
     <article class="blog-post">
-      <h1>Gua Sha Schritt-für-Schritt Anleitung</h1>
-      <p>Entdecke, wie du mit deinem JadeBeauty Gua Sha Stein in nur wenigen Schritten für strahlende Haut und Entspannung sorgst. Folge den klaren Bildern und Anweisungen!</p>
-
-      <p class="repeat-note">🔄 Wiederhole jeden Schritt 3–5 Mal – abwechselnd links und rechts für beste Ergebnisse! ✨</p>
-
-      <div class="guasha-step">
-        <img src="assets/img/guasha_step1.png" alt="Gua Sha Schritt 1: Stirn" class="lightbox" tabindex="0" />
-        <p><strong>✨ Schritt 1: Stirn verwöhnen</strong><br />Mit sanftem Druck den Gua Sha Stein von der Mitte der Stirn zu den Schläfen führen – für mehr Frische und natürliche Strahlkraft.</p>
-      </div>
-
-      <div class="guasha-step">
-        <img src="assets/img/guasha_step2.png" alt="Gua Sha Schritt 2: Wangen" class="lightbox" tabindex="0" />
-        <p><strong>🌿 Schritt 2: Wangen beleben</strong><br />Streiche mit dem Stein von der Nasenwurzel Richtung Ohren und gib deiner Haut einen gesunden Glow.</p>
-      </div>
-
-      <div class="guasha-step">
-        <img src="assets/img/guasha_step3.png" alt="Gua Sha Schritt 3: Augenbrauen" class="lightbox" tabindex="0" />
-        <p><strong>💆‍♀️ Schritt 3: Augenpartie entspannen</strong><br />Führe den Stein vorsichtig unter den Augen vom inneren Augenwinkel nach außen – ideal gegen Schwellungen und für straffe Haut.</p>
-      </div>
-
-      <div class="guasha-step">
-        <img src="assets/img/guasha_step4.png" alt="Gua Sha Schritt 4: Kieferlinie" class="lightbox" tabindex="0" />
-        <p><strong>🌸 Schritt 4: Kieferlinie definieren</strong><br />Bewege den Stein entlang der Kieferlinie von unten nach oben – das löst Verspannungen und formt die Kontur.</p>
-      </div>
-
-      <div class="guasha-step">
-        <img src="assets/img/guasha_step5.png" alt="Gua Sha Schritt 5: Hals" class="lightbox" tabindex="0" />
-        <p><strong>🌱 Schritt 5: Hals revitalisieren</strong><br />Massiere den Hals mit sanften Aufwärtsbewegungen vom Schlüsselbein bis zum Kinn – das regt die Lymphdrainage an und sorgt für ein frisches Gefühl.</p>
-      </div>
+      <h3>5 Tipps für deine Hautpflege mit Gua Sha</h3>
+      <p>Nutze dein Gua Sha richtig für strahlende Haut. So geht's...</p>
     </article>
   </main>
 
   <footer>
-    <p>&copy; 2025 JadeBeauty | <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
+  <script src="darkmode.js"></script>
 </body>
 </html>
