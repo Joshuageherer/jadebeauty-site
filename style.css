@@ -361,4 +361,7 @@ body.darkmode .blog-card a:hover {
   border-radius: 10px;
   margin-bottom: 15px;
 }
+  .blog-card h2 {
+  min-height: 3.5em; /* gleiche Höhe für Blog-Titel */
+}
 
