@@ -2,43 +2,37 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>JadeBeauty – Kontakt</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Kontaktformular und Informationen zu JadeBeauty." />
-  <link rel="stylesheet" href="style.css" />
-  <script src="darkmode.js" defer></script>
-  <script src="lightbox.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – JadeBeauty</title>
+  <link rel="stylesheet" href="style_final_with_nav_wrapper.css" />
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html">Start</a>
-      <a href="shop.html">Shop</a>
-      <a href="anleitung.html">Anleitung</a>
-      <a href="blog.html">Blog</a>
-      <a href="kontakt.html" aria-current="page">Kontakt</a>
-    </nav>
-    <button id="dark-toggle" class="toggle-btn" aria-label="Darkmode umschalten">🌙</button>
+    <div class="nav-wrapper">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="anleitung.html">Anleitung</a>
+        <a href="blog.html">Blog</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <button class="darkmode-toggle" id="darkToggle">🌙</button>
+    </div>
   </header>
 
   <main>
-    <h1>Kontakt</h1>
-    <form action="#" method="POST" class="kontakt-formular">
-      <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" required /><br />
-
-      <label for="email">E-Mail:</label><br />
-      <input type="email" id="email" name="email" required /><br />
-
-      <label for="nachricht">Nachricht:</label><br />
-      <textarea id="nachricht" name="nachricht" rows="5" required></textarea><br />
-
-      <button type="submit" class="cta-button">Absenden</button>
+    <h2>Kontaktiere uns</h2>
+    <form>
+      <input type="text" placeholder="Dein Name" required />
+      <input type="email" placeholder="Deine E-Mail" required />
+      <textarea placeholder="Deine Nachricht"></textarea>
+      <button type="submit">Absenden</button>
     </form>
   </main>
 
   <footer>
-    <p>&copy; 2025 JadeBeauty | <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
+  <script src="darkmode.js"></script>
 </body>
 </html>
