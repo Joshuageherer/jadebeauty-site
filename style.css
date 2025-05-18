@@ -97,71 +97,6 @@ body.darkmode footer {
   color: #aaa;
 }
 
-/* ========== Kontaktformular ========== */
-form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input, textarea, button {
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-body.darkmode input, body.darkmode textarea {
-  background-color: #2a2a2a;
-  color: #f0f0f0;
-  border-color: #444;
-}
-
-button {
-  background-color: #228b22;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-body.darkmode button {
-  background-color: #8fff8f;
-  color: #000;
-}
-
-/* ========== Gua Sha Anleitung Schritte ========== */
-.guasha-step {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.guasha-step img {
-  max-width: 180px;
-  border-radius: 12px;
-  flex-shrink: 0;
-}
-
-.guasha-step p {
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0;
-}
-
-@media (max-width: 600px) {
-  .guasha-step {
-    flex-direction: column;
-    text-align: center;
-  }
-  .guasha-step p {
-    max-width: 100%;
-  }
-}
-
 /* ========== Hero Section ========== */
 .hero {
   text-align: center;
@@ -317,6 +252,8 @@ body.darkmode .product-label {
 body.darkmode .inspiration-grid img {
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
 }
+
+/* ========== Abschnittsüberschriften zentrieren ========== */
 section h2 {
   text-align: center;
   font-size: 2em;
@@ -326,7 +263,7 @@ section h2 {
   display: inline-block;
   padding-bottom: 6px;
 }
+
 body.darkmode section h2 {
   border-bottom: 2px solid #7fff7f;
 }
-
