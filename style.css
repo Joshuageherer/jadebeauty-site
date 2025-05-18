@@ -10,8 +10,8 @@ body {
 }
 
 body.darkmode {
-  background-color: #111;
-  color: #eee;
+  background-color: #121212;
+  color: #f0f0f0;
 }
 
 main {
@@ -25,26 +25,49 @@ a {
   text-decoration: none;
 }
 
-/* ========== Navigation ========== */
+/* ========== Navigation mit Toggle ========== */
 header {
   background-color: #e0f5ea;
   padding: 20px;
   position: sticky;
   top: 0;
   z-index: 999;
-  text-align: center;
 }
 
 body.darkmode header {
-  background-color: #1a1a1a;
+  background-color: #1e1e1e;
 }
 
-nav {
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-wrapper nav {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
   align-items: center;
+  flex: 1;
+}
+
+.nav-wrapper .darkmode-toggle {
+  margin-left: auto;
+  border: 2px solid #228b22;
+  background: none;
+  color: #228b22;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+body.darkmode .darkmode-toggle {
+  border-color: #8fff8f;
+  color: #8fff8f;
 }
 
 nav a {
@@ -53,7 +76,7 @@ nav a {
 }
 
 body.darkmode nav a {
-  color: #7fff7f;
+  color: #8fff8f;
 }
 
 /* ========== Footer ========== */
@@ -67,18 +90,16 @@ footer {
 
 body.darkmode footer {
   background-color: #1a1a1a;
-  color: #999;
+  color: #aaa;
 }
 
-/* ========== Vorteilboxen (Warum JadeBeauty) ========== */
+/* ========== Vorteile ========== */
 section h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-#warum,
-.product-preview,
-.inspiration-section {
+#warum, .product-preview, .inspiration-section {
   text-align: center;
   margin: 0 auto;
 }
@@ -97,6 +118,11 @@ section h2 {
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+body.darkmode .vorteil-box {
+  background-color: #1f2f27;
+  color: #e0e0e0;
 }
 
 /* ========== Produkt-Vorschau ========== */
@@ -134,8 +160,7 @@ section h2 {
   margin-bottom: 12px;
 }
 
-.product-box h3,
-.product-box p {
+.product-box h3, .product-box p {
   margin: 0;
   padding: 0;
 }
@@ -155,6 +180,16 @@ section h2 {
   border-radius: 20px;
   font-size: 13px;
   font-weight: bold;
+}
+
+body.darkmode .product-box {
+  background-color: #1f2f27;
+  color: #e0e0e0;
+}
+
+body.darkmode .product-label {
+  background-color: #5fb96f;
+  color: #fff;
 }
 
 /* ========== Inspiration ========== */
@@ -178,79 +213,37 @@ section h2 {
   transform: scale(1.05);
 }
 
-/* ========== Darkmode Toggle Button ========== */
-.darkmode-toggle {
-  cursor: pointer;
-  background: none;
-  border: 2px solid #228b22;
-  color: #228b22;
-  padding: 5px 10px;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-body.darkmode .darkmode-toggle {
-  border-color: #7fff7f;
-  color: #7fff7f;
-}
-
-
-/* Darkmode: Hintergrund und Schrift */
-body.darkmode {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-
-/* Header Darkmode */
-body.darkmode header {
-  background-color: #1e1e1e;
-}
-
-/* Footer Darkmode */
-body.darkmode footer {
-  background-color: #1e1e1e;
-  color: #aaa;
-}
-
-/* Navigation Darkmode */
-body.darkmode nav a {
-  color: #8fff8f;
-}
-
-/* Vorteilboxen Darkmode */
-body.darkmode .vorteil-box {
-  background-color: #1f2f27;
-  color: #e0e0e0;
-}
-
-/* Produktboxen Darkmode */
-body.darkmode .product-box {
-  background-color: #1f2f27;
-  color: #e0e0e0;
-}
-
-body.darkmode .product-label {
-  background-color: #5fb96f;
-  color: #fff;
-}
-
-/* Inspiration-Bilder Darkmode: bleibt hell */
 body.darkmode .inspiration-grid img {
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
 }
 
-/* Toggle Button Darkmode */
-body.darkmode .darkmode-toggle {
-  border-color: #8fff8f;
-  color: #8fff8f;
+/* ========== Formulare ========== */
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-/* Formular Darkmode */
-body.darkmode input,
-body.darkmode textarea {
+input, textarea, button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+body.darkmode input, body.darkmode textarea {
   background-color: #2a2a2a;
   color: #f0f0f0;
   border-color: #444;
+}
+
+button {
+  background-color: #228b22;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 body.darkmode button {
