@@ -268,41 +268,7 @@ body.darkmode section h2 {
   border-bottom: 2px solid #7fff7f;
 }
 
-
-/* ========== Responsive Mobile Optimierung ========== */
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.6em;
-  }
-
-  .hero p {
-    font-size: 1em;
-  }
-
-  .cta-button {
-    padding: 14px 20px;
-    font-size: 1rem;
-  }
-
-  .product-grid,
-  .vorteile-grid,
-  .inspiration-grid {
-    grid-template-columns: 1fr;
-  }
-
-  main {
-    padding: 20px 12px;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-
-  .darkmode-toggle {
-    padding: 6px 8px;
-    font-size: 0.9rem;
-  }
-}
+/* ========== Blog Grid ========== */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -343,7 +309,48 @@ body.darkmode section h2 {
 .blog-card:hover {
   transform: scale(1.02);
 }
+
 body.darkmode .blog-card {
   background-color: #1f2f27;
   color: #eee;
- } 
+}
+
+body.darkmode .blog-card a:hover {
+  color: #7fff7f;
+}
+
+/* ========== Mobile Optimierung ========== */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .cta-button {
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+
+  .product-grid,
+  .vorteile-grid,
+  .inspiration-grid,
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 20px 12px;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  .darkmode-toggle {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
+}
