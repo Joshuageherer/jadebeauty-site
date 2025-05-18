@@ -193,3 +193,67 @@ body.darkmode .darkmode-toggle {
   border-color: #7fff7f;
   color: #7fff7f;
 }
+
+
+/* Darkmode: Hintergrund und Schrift */
+body.darkmode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Header Darkmode */
+body.darkmode header {
+  background-color: #1e1e1e;
+}
+
+/* Footer Darkmode */
+body.darkmode footer {
+  background-color: #1e1e1e;
+  color: #aaa;
+}
+
+/* Navigation Darkmode */
+body.darkmode nav a {
+  color: #8fff8f;
+}
+
+/* Vorteilboxen Darkmode */
+body.darkmode .vorteil-box {
+  background-color: #1f2f27;
+  color: #e0e0e0;
+}
+
+/* Produktboxen Darkmode */
+body.darkmode .product-box {
+  background-color: #1f2f27;
+  color: #e0e0e0;
+}
+
+body.darkmode .product-label {
+  background-color: #5fb96f;
+  color: #fff;
+}
+
+/* Inspiration-Bilder Darkmode: bleibt hell */
+body.darkmode .inspiration-grid img {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+/* Toggle Button Darkmode */
+body.darkmode .darkmode-toggle {
+  border-color: #8fff8f;
+  color: #8fff8f;
+}
+
+/* Formular Darkmode */
+body.darkmode input,
+body.darkmode textarea {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border-color: #444;
+}
+
+body.darkmode button {
+  background-color: #8fff8f;
+  color: #000;
+}
