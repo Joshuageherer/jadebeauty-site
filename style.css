@@ -195,4 +195,20 @@ body.darkmode button {
 .cta-button:hover {
   background-color: #1b751b;
 }
+/* Hero Darkmode */
+body.darkmode .hero {
+  background-color: #1f2f27;
+  color: #f0f0f0;
+}
+
+body.darkmode .hero .cta-button {
+  background-color: #5fb96f;
+  color: white;
+}
+
+body.darkmode .hero .cta-button:hover {
+  background-color: #7fff7f;
+  color: black;
+}
+
 
