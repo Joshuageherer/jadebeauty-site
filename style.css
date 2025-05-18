@@ -353,8 +353,12 @@ body.darkmode .blog-card a:hover {
     padding: 6px 8px;
     font-size: 0.9rem;
   }
+/* ========== Einheitliche Blog-Bildhöhe & Layout-Fix ========== */
+.blog-card img {
+  height: 220px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
-.blog-card:first-of-type img {
-  max-height: 140px;
-  object-fit: cover;
-}
+
