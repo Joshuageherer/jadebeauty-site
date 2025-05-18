@@ -1,11 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtn = document.getElementById("dark-toggle");
-  toggleBtn.addEventListener("click", () => {
-    const currentTheme = document.documentElement.getAttribute("data-theme");
-    if (currentTheme === "dark") {
-      document.documentElement.removeAttribute("data-theme");
-    } else {
-      document.documentElement.setAttribute("data-theme", "dark");
-    }
+  const toggle = document.getElementById("darkToggle");
+  const body = document.body;
+
+  // Lade Zustand aus localStorage
+  if (localStorage.getItem("darkmode") === "on") {
+    body.classList.add("darkmode");
+  }
+
+  // Toggle beim Klick
+  toggle?.addEventListener("click", () => {
+    body.classList.toggle("darkmode");
+    localStorage.setItem("darkmode", body.classList.contains("darkmode") ? "on" : "off");
   });
 });
