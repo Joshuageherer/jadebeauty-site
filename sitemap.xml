@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://jadebeauty.at/</loc></url>
-  <url><loc>https://jadebeauty.at/anleitung.html</loc></url>
-  <url><loc>https://jadebeauty.at/blog.html</loc></url>
-  <url><loc>https://jadebeauty.at/artikel-guasha.html</loc></url>
-  <url><loc>https://jadebeauty.at/artikel-selfcare.html</loc></url>
-  <url><loc>https://jadebeauty.at/kontakt.html</loc></url>
-  <url><loc>https://jadebeauty.at/impressum.html</loc></url>
-  <url><loc>https://jadebeauty.at/datenschutz.html</loc></url>
+  <url><loc>https://jadebeauty.at/index.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/anleitung.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/kontakt.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/impressum.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/datenschutz.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/blog.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/blog-selfcare-kerzen.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/blog-guasha-anwendung.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/blog-haut-boost-tipps.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/blog-beauty-unterwegs.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/blog-jade-stein-vorteile.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/blog-hautpflege-fehler.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/blog-jade-roller-gua-sha.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/blog-gesichtsmassage.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/product-color-mug.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/product-kosmetiktasche.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/product-selfcare-tasse.html</loc><lastmod>2025-05-19</lastmod></url>
+  <url><loc>https://jadebeauty.at/product-kerze.html</loc><lastmod>2025-05-19</lastmod></url>
 </urlset>
